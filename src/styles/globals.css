@@ -93,10 +93,14 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-a, time {
-  /* color: inherit; */
+time {
   color: #ffb86c;
-  text-decoration: none;
+}
+
+a {
+  /* color: inherit; */
+  color: #19f9d8;
+  font-family: var(--font-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,7 +110,8 @@ a, time {
 }
 
 ul, ol {
-  list-style: none
+  list-style: none;
+  min-height: fit-content;
 }
 
 h2 {
@@ -131,8 +136,8 @@ h2 {
   top: 0;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1024px) {
   :root {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }

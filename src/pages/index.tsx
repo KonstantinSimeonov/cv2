@@ -19,41 +19,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <button
-        onClick={() => {
-          import(`html2pdf.js`).then(({ default: html2pdf }) => {
-            html2pdf()
-              .set({
-                margin: 0.5,
-                filename: `test.pdf`,
-                image: { type: `jpeg`, quality: 1 },
-                html2canvas: { scale: 1, windowWidth: 800 },
-                jsPDF: { format: `A4` },
-              })
-              .from(document.body)
-              .save();
-          });
-        }}
-      >
-        PDF
-      </button>
+
       <main className={styles.main}>
         <header className={`${styles.stack}`}>
           <h1 {...int}>Konstantin Simeonov</h1>
 
-          <div className={styles.cluster} style={{ flexWrap: `nowrap` }}>
+          <div className={`${styles.cluster} ${styles.between} ${styles.padding}`} style={{ flexWrap: `nowrap` }}>
             <div
-              className={`${styles.cluster} ${styles.between} ${styles.padding}`}
+              className={styles.stack}
             >
               {data.personalInfo.contacts.map((c) => (
                 <Link
                   key={c.url}
-                  className={`${styles.card} ${int.className}`}
+                  {...int}
                   href={c.url}
                 >
-                  <strong>
-                    {c.text} <span>-&gt;</span>
-                  </strong>
+                  <p>
+                    {c.text}
+                  </p>
                 </Link>
               ))}
             </div>
@@ -97,15 +80,7 @@ export default function Home() {
             {(() => {
               const leakySod = (
                 <div
-                  style={{
-                    minHeight: `3rem`,
-                    flex: 1,
-                    alignSelf: `center`,
-                    justifySelf: `flex-end`,
-                    width: `2px`,
-                    background: `#ffb86c`,
-                    height: `3rem`,
-                  }}
+                  className={styles[`leaky-sod`]}
                 />
               );
               const we = data.workExperience.map((w, i) => (
@@ -139,7 +114,7 @@ export default function Home() {
                 [[], []]
               );
 
-              const cn = `${styles.cluster} ${styles.evenly} ${styles.start}`;
+              const cn = `${styles.cluster} ${styles.evenly} ${styles.stretch}`;
 
               return (
                 <>
@@ -163,7 +138,7 @@ export default function Home() {
         </article>
         <article>
           <h2 {...int}>Projects</h2>
-          <div className={styles.grid}>
+          <div className={`${styles.cluster} ${styles.start}`}>
             {data.projects.map((p) => (
               <Link
                 key={p.title}
@@ -180,6 +155,27 @@ export default function Home() {
           </div>
         </article>
       </main>
+      <footer className={`${styles.cluster} ${styles.evenly}`} style={{ padding: `3rem`, borderTop: `1px dashed #ffb86c` }}>
+      <button
+        onClick={() => {
+          import(`html2pdf.js`).then(({ default: html2pdf }) => {
+            html2pdf()
+              .set({
+                margin: 0.5,
+                filename: `test.pdf`,
+                image: { type: `jpeg`, quality: 1 },
+                html2canvas: { scale: 1, windowWidth: 800 },
+                jsPDF: { format: `A4` },
+              })
+              .from(document.body)
+              .save();
+          });
+        }}
+      >
+        Generate PDF
+      </button>
+      <Link href="https://github.com/KonstantinSimeonov/cv2">Built by me xD</Link>
+    </footer>
     </>
   );
 }
