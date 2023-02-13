@@ -95,8 +95,9 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-a {
-  color: inherit;
+a, time {
+  /* color: inherit; */
+  color: #ffb86c;
   text-decoration: none;
 }
 
@@ -104,4 +105,16 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+ul, ol {
+  list-style: none
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+h1, h2, h3, h4 {
+  color: #ffb86c;
 }
