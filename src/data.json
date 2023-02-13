@@ -183,7 +183,7 @@
         },
         {
             "name": "NodeJS",
-            "description": "NodeJS is one of the main reasons I love doing JavaScript! I've passed a course at Telerik Academy and I've been using it for many different purposes ever since - <strong>working with files, web crawling, creating RESTful APIs or web applications that do server-side rendering, doing small scripts to automate tasks</strong>. In the process I also became familiar with <strong>asynchronous programming</strong>, as well as tools of the JavaScript ecosystem such as <strong>npm and yarn</strong> and practices like <strong>testing, automated build processes, continuous integration and deployment.</strong> The thing I love most about Node is that it has a super rich system of libraries and allows developers to quickly get a prototype working.",
+            "description": "NodeJS is one of the main reasons I love doing JavaScript! I've passed a course at Telerik Academy and I've been using it for many different purposes ever since - working with files, web crawling, creating RESTful APIs or web applications that do server-side rendering, doing small scripts to automate tasks. In the process I also became familiar with asynchronous programming, as well as tools of the JavaScript ecosystem such as npm and yarn and practices like testing, automated build processes, continuous integration and deployment. The thing I love most about Node is that it has a super rich system of libraries and allows developers to quickly get a prototype working.",
             "priority": 1,
             "img_url": "/node.png"
         },
@@ -194,13 +194,13 @@
             "img_url": "/mentoring.png"
         },
         {
-            "name": "Functional programming",
+            "name": "FP",
             "description": "FP can provide amazing benefits (immutability, pure functions, abstraction via monads/functions/composition) in the right circumstances - I've had a blast leveraging the strong sides of FP with Haskell/Typescript/Scala in a variety of situations like automation, restful APIs, front-end development and testing.",
             "img_url": "/haskell.png"
         },
         {
-            "name": "Linux & bash",
-            "description": "I've used <strong>Fedora</strong>, <strong>Gentoo</strong> and later <strong>Arch linux distributions</strong> since my first year as a developer. I've been using <strong>bash</strong> features, such as loops, pipes, streams and command line tools like grep, cat, sed, rsync, ssh, less and other to automate and simplify tasks ever since. I love the increase in productivity which bash bring for me!",
+            "name": "Linux/bash",
+            "description": "I've used Arch linux since my first year as a developer. I've been using bash features, such as loops, pipes, streams and command line tools like grep, cat, sed, rsync, ssh, less and other to automate and simplify tasks ever since. I love the increase in productivity which bash bring for me!",
             "img_url": "/pemgvin.jpg"
         },
         {
@@ -216,12 +216,12 @@
         },
         {
             "name": "git",
-            "description": "I started using <strong>git</strong> since day one of doing programming - many of the materials I learned from and all the projects I contributed to were either hosted on GitHub or GitLab servers, which had me using git while studying and working. This in turn helped me understand the concept of <strong>distributed source control</strong> and get comfortable with <strong>branches, merging, rebasing and navigating repository history.</strong>",
+            "description": "I started using git since day one of doing programming - many of the materials I learned from and all the projects I contributed to were either hosted on GitHub or GitLab servers, which had me using git while studying and working. This in turn helped me understand the concept of distributed source control and get comfortable with branches, merging, rebasing and navigating repository history.",
             "img_url": "/git.png"
         },
         {
             "name": "OOP",
-            "description": "In the course of studying and working with <strong>C#, ASP.NET</strong>, <string>JavaScript</strong> and <strong>Scala</strong> I had contact with diverse object-oriented features, such as class and prototypal inheritance, interfacing, object composition, abstraction, polymorphism and encapsulation. Also, while learning and using object-oriented programming, I became familiar with <strong>design patterns</strong> such as decorators, chain of responsibility, command pattern, composite objects, factories and mediators. Those techniques helped me better understand how to write more <strong>maintainable, flexible, testable and reusable code</strong>.",
+            "description": "In the course of studying and working with C#, ASP.NET, JavaScript and Scala I had contact with diverse object-oriented features, such as class and prototypal inheritance, interfacing, object composition, abstraction, polymorphism and encapsulation. Also, while learning and using object-oriented programming, I became familiar with design patterns such as decorators, chain of responsibility, command pattern, composite objects, factories and mediators. Those techniques helped me better understand how to write more maintainable, flexible, testable and reusable code.",
             "priority": 9,
             "img_url": "/oop.png"
         }

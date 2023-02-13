@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import data from "@/data.json";
 import Link from "next/link";
+import { Tooltip } from "@/components/Tooltip";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,9 @@ export default function Home() {
                 className={`${styles.card} ${int.className}`}
                 href={c.url}
               >
-                <strong>{c.text} <span>-&gt;</span></strong>
+                <strong>
+                  {c.text} <span>-&gt;</span>
+                </strong>
               </Link>
             ))}
             <Image
@@ -44,24 +47,24 @@ export default function Home() {
         </header>
         <article>
           <h2 {...int}>Skills</h2>
-          <ol className={styles.cluster}>
+          <ol className={styles.cluster} style={{ paddingLeft: `1.5rem` }}>
             {data.skills.map((s) => (
               <li
                 key={s.name}
-                className={`${styles.description} ${styles.stack}`}
-                style={{ width: `10rem` }}
               >
-                <div>
-                  {s.img_url ? (
-                    <Image
-                      src={s.img_url}
-                      height="45"
-                      width="40"
-                      alt="typescript"
-                    />
-                  ) : null}
-                </div>
-                <p>{s.name}</p>
+                <Tooltip content={s.description}>
+                  <div className={styles.stack} style={{ alignItems: `center` }}>
+                      <Image
+                        src={s.img_url}
+                        height="45"
+                        width="40"
+                        alt="typescript"
+                      />
+                  <div className={styles.description}>
+                  <p style={{ maxWidth: `16ch` }}>{s.name}</p>
+</div>
+                  </div>
+                </Tooltip>
               </li>
             ))}
           </ol>

@@ -38,6 +38,10 @@
   border-radius: var(--border-radius);
 }
 
+.description p.opaque {
+  background-color: rgba(var(--callout-rgb), 1);
+}
+
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
