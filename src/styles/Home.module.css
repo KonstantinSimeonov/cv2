@@ -296,6 +296,10 @@
   align-items: stretch;
 }
 
+.between {
+  justify-content: space-between;
+}
+
 .stack {
   display: flex;
   flex-direction: column;
@@ -318,4 +322,12 @@
 
 .work {
   width: 23rem;
+}
+
+.photo {
+  transform: rotate(10deg);
+}
+
+.padding {
+  padding-right: 5rem
 }

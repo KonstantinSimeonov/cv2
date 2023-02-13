@@ -10,23 +10,23 @@
         "aboutMe": "Located in Sofia, Bulgaria, currently busy with mentoring 2 people, creating challenges for geektastic.com and reading the Designing Data Intensive Applications book.",
         "contacts": [
             {
-                "content": "https://www.hackerrank.com/kon_trombon",
-                "iconUrl": "target/web/public/main/hackerrank.png",
+                "url": "https://www.hackerrank.com/kon_trombon",
+                "text": "hackerrank",
                 "urlType": "url"
             },
             {
-                "content": "+359 885 032 502",
-                "iconUrl": "target/web/public/main/phone-icon.png",
+                "url": "tel:+359 885 032 502",
+                "text": "+359 885 032 502",
                 "urlType": "phone"
             },
             {
-                "content": "https://github.com/KonstantinSimeonov",
-                "iconUrl": "target/web/public/main/github-icon.png",
+                "url": "https://github.com/KonstantinSimeonov",
+                "text": "github",
                 "urlType": "url"
             },
             {
-                "content": "kon.simeonov@protonmail.com",
-                "iconUrl": "target/web/public/main/email-icon.png",
+                "url": "mailto:kon.simeonov@protonmail.com",
+                "text": "kon.simeonov@protonmail.com",
                 "urlType": "email"
             }
         ]
