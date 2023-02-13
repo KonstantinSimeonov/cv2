@@ -22,7 +22,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <header className={`${styles.stack}`}>
-          <h1 {...int}>Konstantin Simeonov</h1>
+          <a href="https://kscv.vercel.app" style={{ textDecoration: `none` }}><h1 {...int}>Konstantin Simeonov</h1></a>
 
           <div
             className={`${styles.cluster} ${styles.between} ${styles.padding}`}
@@ -147,24 +147,19 @@ export default function Home() {
         </article>
       </main>
       <footer
-        className={`${styles.cluster} ${styles.evenly}`}
-        style={{
-          padding: `1.5rem`,
-          marginTop: `3rem`,
-          borderTop: `1px dashed #ffb86c`,
-        }}
+        className={`${styles.cluster} ${styles.evenly} ${styles.footer}`}
       >
         <a
-          href="#"
+          href="https://kscv.vercel.app"
           onClick={(e) => {
             e.preventDefault();
             import(`html2pdf.js`).then(({ default: html2pdf }) => {
               html2pdf()
                 .set({
                   margin: 0.5,
-                  filename: `test.pdf`,
-                  image: { type: `jpeg`, quality: 1 },
-                  html2canvas: { scale: 1, windowWidth: 800 },
+                  filename: `Konstantin Simeonov Resume.pdf`,
+                  image: { type: `png`, quality: 10 },
+                  html2canvas: { scale: 2, windowWidth: 800 },
                   jsPDF: { format: `A4` },
                 })
                 .from(document.body)
