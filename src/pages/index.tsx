@@ -148,10 +148,16 @@ export default function Home() {
       </main>
       <footer
         className={`${styles.cluster} ${styles.evenly}`}
-        style={{ padding: `3rem`, borderTop: `1px dashed #ffb86c` }}
+        style={{
+          padding: `1.5rem`,
+          marginTop: `3rem`,
+          borderTop: `1px dashed #ffb86c`,
+        }}
       >
-        <button
-          onClick={() => {
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
             import(`html2pdf.js`).then(({ default: html2pdf }) => {
               html2pdf()
                 .set({
@@ -167,7 +173,10 @@ export default function Home() {
           }}
         >
           Generate PDF
-        </button>
+        </a>
+        <a href="https://kscv.vercel.app">
+          The website is way cooler than the PDF
+        </a>
         <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">
           Built by me xD
         </Link>
