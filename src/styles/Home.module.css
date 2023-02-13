@@ -337,6 +337,11 @@ a.card {
 
 .photo {
   transform: rotate(10deg);
+  transition: transform 0.3s ease-out;
+}
+
+.photo:hover {
+  transform: rotate(0deg);
 }
 
 .padding {
