@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: stretch;
   min-height: 100vh;
   overflow: auto;
@@ -337,8 +336,14 @@
 }
 
 @media screen and (max-width: 1500px) {
+  .photo {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
   .main {
     padding: 0 1rem;
+    gap: 0;
   }
 
   .card {
