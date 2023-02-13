@@ -24,20 +24,14 @@ export default function Home() {
         <header className={`${styles.stack}`}>
           <h1 {...int}>Konstantin Simeonov</h1>
 
-          <div className={`${styles.cluster} ${styles.between} ${styles.padding}`} style={{ flexWrap: `nowrap` }}>
-            <div
-              className={styles.stack}
-            >
+          <div
+            className={`${styles.cluster} ${styles.between} ${styles.padding}`}
+            style={{ flexWrap: `nowrap` }}
+          >
+            <div className={styles.stack}>
               {data.personalInfo.contacts.map((c) => (
-                <Link
-                  key={c.url}
-                  target="_blank"
-                  {...int}
-                  href={c.url}
-                >
-                  <p>
-                    {c.text}
-                  </p>
+                <Link key={c.url} target="_blank" {...int} href={c.url}>
+                  <p>{c.text}</p>
                 </Link>
               ))}
             </div>
@@ -79,11 +73,7 @@ export default function Home() {
           <h2 {...int}>Work Experience</h2>
           <div className={styles.split}>
             {(() => {
-              const leakySod = (
-                <div
-                  className={styles[`leaky-sod`]}
-                />
-              );
+              const leakySod = <div className={styles[`leaky-sod`]} />;
               const we = data.workExperience.map((w, i) => (
                 <div
                   key={w.location}
@@ -156,27 +146,32 @@ export default function Home() {
           </div>
         </article>
       </main>
-      <footer className={`${styles.cluster} ${styles.evenly}`} style={{ padding: `3rem`, borderTop: `1px dashed #ffb86c` }}>
-      <button
-        onClick={() => {
-          import(`html2pdf.js`).then(({ default: html2pdf }) => {
-            html2pdf()
-              .set({
-                margin: 0.5,
-                filename: `test.pdf`,
-                image: { type: `jpeg`, quality: 1 },
-                html2canvas: { scale: 1, windowWidth: 800 },
-                jsPDF: { format: `A4` },
-              })
-              .from(document.body)
-              .save();
-          });
-        }}
+      <footer
+        className={`${styles.cluster} ${styles.evenly}`}
+        style={{ padding: `3rem`, borderTop: `1px dashed #ffb86c` }}
       >
-        Generate PDF
-      </button>
-      <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">Built by me xD</Link>
-    </footer>
+        <button
+          onClick={() => {
+            import(`html2pdf.js`).then(({ default: html2pdf }) => {
+              html2pdf()
+                .set({
+                  margin: 0.5,
+                  filename: `test.pdf`,
+                  image: { type: `jpeg`, quality: 1 },
+                  html2canvas: { scale: 1, windowWidth: 800 },
+                  jsPDF: { format: `A4` },
+                })
+                .from(document.body)
+                .save();
+            });
+          }}
+        >
+          Generate PDF
+        </button>
+        <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">
+          Built by me xD
+        </Link>
+      </footer>
     </>
   );
 }
