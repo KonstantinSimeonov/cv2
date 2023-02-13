@@ -19,37 +19,44 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <header className={`${styles.stack}`}>
-          <h1 {...int}>Konstantin Simeonov</h1>
-          <button onClick={() => {
-            const body = document.querySelector(`main`)
-              import(`html2pdf.js`).then(m => {
-                m.default().set({
+      <button
+        onClick={() => {
+          import(`html2pdf.js`).then(({ default: html2pdf }) => {
+            html2pdf()
+              .set({
                 margin: 0.5,
                 filename: `test.pdf`,
                 image: { type: `jpeg`, quality: 1 },
                 html2canvas: { scale: 1, windowWidth: 800 },
-                jsPDF: { format: `A4` }
-              }).from(document.body).save()
-            })
-          }}>PDF</button>
+                jsPDF: { format: `A4` },
+              })
+              .from(document.body)
+              .save();
+          });
+        }}
+      >
+        PDF
+      </button>
+      <main className={styles.main}>
+        <header className={`${styles.stack}`}>
+          <h1 {...int}>Konstantin Simeonov</h1>
+
           <div className={styles.cluster} style={{ flexWrap: `nowrap` }}>
-          <div
-            className={`${styles.cluster} ${styles.between} ${styles.padding}`}
-          >
-            {data.personalInfo.contacts.map((c) => (
-              <Link
-                key={c.url}
-                className={`${styles.card} ${int.className}`}
-                href={c.url}
-              >
-                <strong>
-                  {c.text} <span>-&gt;</span>
-                </strong>
-              </Link>
-            ))}
-          </div>
+            <div
+              className={`${styles.cluster} ${styles.between} ${styles.padding}`}
+            >
+              {data.personalInfo.contacts.map((c) => (
+                <Link
+                  key={c.url}
+                  className={`${styles.card} ${int.className}`}
+                  href={c.url}
+                >
+                  <strong>
+                    {c.text} <span>-&gt;</span>
+                  </strong>
+                </Link>
+              ))}
+            </div>
             <Image
               className={styles.photo}
               src="/konche-bonche.jpg"
@@ -63,20 +70,21 @@ export default function Home() {
           <h2 {...int}>Skills</h2>
           <ol className={styles.cluster} style={{ paddingLeft: `1.5rem` }}>
             {data.skills.map((s) => (
-              <li
-                key={s.name}
-              >
+              <li key={s.name}>
                 <Tooltip content={s.description}>
-                  <div className={styles.stack} style={{ alignItems: `center` }}>
-                      <Image
-                        src={s.img_url}
-                        height="45"
-                        width="40"
-                        alt="typescript"
-                      />
-                  <div className={styles.description}>
-                  <p style={{ maxWidth: `16ch` }}>{s.name}</p>
-</div>
+                  <div
+                    className={styles.stack}
+                    style={{ alignItems: `center` }}
+                  >
+                    <Image
+                      src={s.img_url}
+                      height="45"
+                      width="40"
+                      alt="typescript"
+                    />
+                    <div className={styles.description}>
+                      <p style={{ maxWidth: `16ch` }}>{s.name}</p>
+                    </div>
                   </div>
                 </Tooltip>
               </li>
@@ -135,7 +143,9 @@ export default function Home() {
 
               return (
                 <>
-                  <div style={{ flexWrap: `nowrap` }} className={cn}>{top}</div>
+                  <div style={{ flexWrap: `nowrap` }} className={cn}>
+                    {top}
+                  </div>
                   <div className={`${styles.stack} ${styles.splitter}`}>
                     <time {...int}>2015</time>
                     <hr />
@@ -143,7 +153,9 @@ export default function Home() {
                       {new Date().getFullYear()}
                     </time>
                   </div>
-                  <div style={{ flexWrap: `nowrap` }} className={cn}>{bottom}</div>
+                  <div style={{ flexWrap: `nowrap` }} className={cn}>
+                    {bottom}
+                  </div>
                 </>
               );
             })()}
