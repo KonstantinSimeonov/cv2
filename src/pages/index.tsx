@@ -31,6 +31,7 @@ export default function Home() {
               {data.personalInfo.contacts.map((c) => (
                 <Link
                   key={c.url}
+                  target="_blank"
                   {...int}
                   href={c.url}
                 >
@@ -174,7 +175,7 @@ export default function Home() {
       >
         Generate PDF
       </button>
-      <Link href="https://github.com/KonstantinSimeonov/cv2">Built by me xD</Link>
+      <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">Built by me xD</Link>
     </footer>
     </>
   );
