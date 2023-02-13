@@ -38,7 +38,8 @@
             "jobTitle": "Technical Trainer",
             "location": "Telerik Academy",
             "descriptions": [
-                "Delivered lectures that reached more than 2000 students and helped them create their first web applications and dive into web development with C#, HTML, CSS and JavaScript",
+                "Delivered lectures that helped more than 2000 students on their journey from beginner to juniour in web development with C#, HTML, CSS and JavaScript",
+                "Created exam programming problems for topics like algorithms, javascript DOM and programming fundamentals, organized exams and lectures",
                 "Experienced firsthand how important keeping deadlines is, became better at taking responsibilities and honed organizational skills"
             ]
         },
@@ -61,7 +62,8 @@
             "descriptions": [
                 "Scheduled emails leveraging Akka and Apache Kafka",
                 "Implemented email statistics using Apache Spark and Apache Kafka",
-                "Ensured code correctness by combining functional programming and automated testing with ScalaTest and ScalaCheck"
+                "Ensured code correctness by combining functional programming and testing with ScalaTest and ScalaCheck",
+                "Used AWS SQS to implement customer facing APIs"
             ]
         },
         {
@@ -70,9 +72,10 @@
             "jobTitle": "Software Developer",
             "location": "Coursera",
             "descriptions": [
-                "Developed rhyme.com, interactive studying VM environment directly in their browser, complete with audio/video calls, video instructions and remote desktop connections",
-                "Explored typescript and applied functional programming concepts in a react web app",
-                "Reduced complexity/improved stability with property-based testing, publishing typescript definitions for untyped libraries, setting up code coverage and automated dependency updates, simplifying the build processes"
+                "Developed rhyme.com, an in-browser interactive studying VM environment, complete with audio/video calls and video instructions",
+                "Implemented video transcriptions with AWS Transcribe",
+                "Worked with React, Redux, Typescript, PostgreSQL and Golang",
+                "Introduced property-based testing, published typescript definitions for untyped libraries, set up code coverage and automated dependency updates"
             ]
         },
         {
@@ -83,8 +86,8 @@
             "descriptions": [
                 "Worked on portal.synthesis.is with nextjs, typeorm, mysql, zod and react-query",
                 "Optimized typeorm/mysql queries, modified indexes and constraints, migrated table schemas to improve performance and maintainability",
-                "Sped up CI runtime from 13 down to 3 mins using github action sharding, parallel db testing and job splitting",
-                "Helped improve app security by enforcing authorization through strong typing and introduced zod to help maintain data integrity"
+                "Sped up CI runtime from 13 to 3 mins using sharding, parallel db testing and job splitting",
+                "Introduced strongly-typed middleware for authentication and validation to improve security"
             ]
         }
     ],
