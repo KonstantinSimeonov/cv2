@@ -363,6 +363,7 @@ a.card {
   border-top: 1px dashed #ffb86c;
 }
 
+
 @media screen and (max-width: 1024px) {
   .footer {
     padding: 1rem;
@@ -405,5 +406,16 @@ a.card {
 
   .stack {
     gap: 0.1rem;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .work {
+    max-width: 9rem;
+  }
+
+  .cluster {
+    gap: 0.45rem;
   }
 }
