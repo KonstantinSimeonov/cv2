@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "ieo": "next-image-export-optimizer",
-    "kekw": "yarn build && yarn export && yarn ieo"
+    "img-opt": "next-image-export-optimizer",
+    "export-all": "yarn build && yarn export && yarn img-opt"
   },
   "dependencies": {
     "@next/font": "13.1.6",

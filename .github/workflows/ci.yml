@@ -1,0 +1,32 @@
+name: CI
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: install deps
+        run: npm i
+
+      - name: build
+        run: npm run build
+
+      - name: export
+        run: npm run export
+
+      - name: optimize images
+        run: npm run img-opt
+
+      - name: store exported build
+        uses: actions/upload-artifact@v3
+        with:
+          name: cv
+          path: out/*
