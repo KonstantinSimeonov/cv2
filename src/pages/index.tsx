@@ -23,7 +23,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <header className={`${styles.stack}`}>
-          <h1 {...int}>Konstantin Simeonov</h1>
+          <h1 {...int} style={{ textDecoration: `underline` }}>Konstantin Simeonov</h1>
 
           <div
             className={`${styles.cluster} ${styles.between} ${styles.padding}`}
