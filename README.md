@@ -7,3 +7,4 @@ npm start
 ```
 
 Also, it's [deployed](https://kscv.vercel.app/).
+Deployed at [AWS](http://kscv-bucket.s3-website.eu-central-1.amazonaws.com/) too.
