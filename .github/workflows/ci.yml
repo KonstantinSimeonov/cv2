@@ -47,7 +47,12 @@ jobs:
           name: cv
           path: out/
 
-      - run: find .
+      - name: show artifacts
+        run: find .
         shell: bash
 
-      - run: aws s3 sync out s3://kscv-bucket --delete
+      - name: upload to s3
+        run: aws s3 sync out s3://kscv-bucket --delete
+
+      - name: invalidate cloudfront cache
+        run: aws cloudfront create-invalidation --distribution-id=${{ secrets.AWS_CLOUDFRONT_DIST_ID }} --paths /
