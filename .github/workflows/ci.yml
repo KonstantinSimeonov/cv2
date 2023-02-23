@@ -36,7 +36,7 @@ jobs:
     needs:
       - build
     steps:
-      - uses: chrislennon/action-aws-cli@v1.1
+      - uses: ItsKarma/aws-cli@v1.70.0
       - uses: actions/download-artifact@v3
         with:
           name: cv
