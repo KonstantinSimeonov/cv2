@@ -164,57 +164,57 @@
             "name": "Algorithms",
             "description": "I've always had a lot of fun implementing various data structures and solving competetive programming problems - take a look at my github if you haven't done so already!",
             "priority": 6,
-            "img_url": "/algo.png"
+            "img_url": "Algo"
         },
         {
             "name": "Typescript",
             "description": "I've used Javascript/Typescript in my jobs at TelerikAcademy, ChaosGroup, Rhyme and Synthesis to build interactive user interfaces, single page applications, backend services, automated builds and tests processes.",
             "priority": 2,
-            "img_url": "/ts.png"
+            "img_url": "TS"
         },
         {
             "name": "NodeJS",
             "description": "Node is the backend platform I feel most comfortable with - I love the opportunity to reuse code between frontend and backend, the abundance of libraries and the ease of prototyping. I've been using Node to build apps with Express, NextJS and Electron.",
             "priority": 1,
-            "img_url": "/node.png"
+            "img_url": "Node"
         },
         {
             "name": "Mentoring",
             "description": "Mentoring is a natural part of working in a team - I had the opportunity to mentor a lot of students as a teacher in TelerikAcademy and that helped me later successfully mentor fresh team members in Coursera and Synthesis. I'm also mentoring several people outside of work - check out https://latrovaliev.dev/, he's my best student!",
             "priority": 4,
-            "img_url": "/mentoring.png"
+            "img_url": "Mentor"
         },
         {
             "name": "FP",
             "description": "FP can provide amazing benefits (immutability, pure functions, abstraction via monads/functions/composition) in the right circumstances - I've had a blast leveraging the strong sides of FP with Haskell/Typescript/Scala in a variety of situations like automation, restful APIs, front-end development and testing.",
-            "img_url": "/haskell.png"
+            "img_url": "Haskell"
         },
         {
             "name": "Linux/bash",
             "description": "I've used Fedora/Gentoo/Arch since my first year as a developer. I'm using bash loops, pipes, streams and command line tools like grep, cat, sed, rsync, ssh, less and other to make life simpler. Can't live without a terminal anymore!",
-            "img_url": "/pemgvin.jpg"
+            "img_url": "Linux"
         },
         {
             "name": "SQL",
             "description": "Building projects like editable video transcriptions (Coursera), 3d material store (ChaosGroup), student system with different roles, user search, event scheduling (Synthesis) made me appreciate how powerful and fun, yet also frustrating and complex relational databases/SQL can be.",
-            "img_url": "/pgsql.png"
+            "img_url": "SQL"
         },
         {
             "name": "React",
             "description": "I've been using React for 7 (at TelerikAcademy, ChaosGroup, Coursera, Synthesis) years and I love what it offers - reusable components/hooks, terse and declarative code, comprehensible UI state management and reasonable performance.",
             "priority": -1,
-            "img_url": "/react.png"
+            "img_url": "React"
         },
         {
             "name": "git",
             "description": "Feature branches, rebasing, reflog, partial checkouts/stages, stashing - git is awesome, easily the best vcs for most software projects.",
-            "img_url": "/git.png"
+            "img_url": "Git"
         },
         {
             "name": "OOP",
             "description": "Before I became a functional programming hipster, I've explored OOP concepts (through working with C#, JS and Scala) such as class/prototypal inheritance, object composition, polymorphism and encapsulation. I also became familiar with design patterns such as decorators, chain of responsibility, command pattern, composite objects, factories and mediators.",
             "priority": 9,
-            "img_url": "/oop.png"
+            "img_url": "Oop"
         }
     ]
 }

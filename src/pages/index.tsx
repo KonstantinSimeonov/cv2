@@ -1,10 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import data from "@/data.json";
 import Link from "next/link";
 import { Tooltip } from "@/components/Tooltip";
+import ImgMap from "@/images"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,9 +36,9 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-            <Image
+            <ExportedImage
               className={styles.photo}
-              src="/konche-bonche.jpg"
+              src={ImgMap.Photo}
               height="150"
               width="150"
               alt="pic of me"
@@ -54,8 +55,8 @@ export default function Home() {
                     className={styles.stack}
                     style={{ alignItems: `center` }}
                   >
-                    <Image
-                      src={s.img_url}
+                    <ExportedImage
+                      src={ImgMap[s.img_url]}
                       height="45"
                       width="40"
                       alt="typescript"
