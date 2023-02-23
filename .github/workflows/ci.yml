@@ -50,4 +50,4 @@ jobs:
       - run: find .
         shell: bash
 
-      - run: aws s3 ls s3://kscv-bucket
+      - run: aws s3 sync out s3://kscv-bucket --delete
