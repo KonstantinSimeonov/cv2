@@ -30,3 +30,17 @@ jobs:
         with:
           name: cv
           path: out/*
+
+  deploy:
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: cv
+          path: out/*
+
+      - run: ls
+        shell: bash
+
+      - run: find .
+        shell: bash
+
