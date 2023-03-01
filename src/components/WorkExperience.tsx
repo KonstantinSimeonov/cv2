@@ -14,7 +14,7 @@ export const WorkExperience: React.FC<{
   <Stack align="flex-start">
     {experience
       .map((job) => (
-        <Stack key={job.location} className={styles.work} align="flex-start">
+        <Stack key={job.location} gap={0.5} align="flex-start">
           <div>
             <Text tag="h4">
               {job.location} ({job.jobTitle})
