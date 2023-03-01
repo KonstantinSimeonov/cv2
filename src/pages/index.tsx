@@ -1,6 +1,5 @@
 import Head from "next/head";
 import ExportedImage from "next-image-export-optimizer";
-import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import data from "@/data.json";
 import Link from "next/link";
@@ -9,9 +8,7 @@ import * as React from "react";
 import { Skills } from "@/components/Skills";
 import { Stack } from "@/components/Stack";
 import { WorkExperience } from "@/components/WorkExperience";
-
-const inter = Inter({ subsets: ["latin"] });
-const int = { className: inter.className } as const;
+import { Text } from "@/components/Text";
 
 export default function Home() {
   return (
@@ -25,7 +22,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <header className={`${styles.stack}`}>
-          <h1 {...int}>Konstantin Simeonov</h1>
+          <Text tag="h1">Konstantin Simeonov</Text>
 
           <div
             className={`${styles.cluster} ${styles.between} ${styles.padding}`}
@@ -33,8 +30,8 @@ export default function Home() {
           >
             <div className={styles.stack}>
               {data.personalInfo.contacts.map((c) => (
-                <Link key={c.url} target="_blank" {...int} href={c.url}>
-                  <p>{c.text}</p>
+                <Link key={c.url} target="_blank" href={c.url}>
+                  <Text>{c.text}</Text>
                 </Link>
               ))}
             </div>
@@ -48,15 +45,15 @@ export default function Home() {
           </div>
         </header>
         <article>
-          <h2 {...int}>Skills</h2>
+          <Text tag="h2">Skills</Text>
           <Skills skills={data.skills} />
         </article>
         <article>
-          <h2 {...int}>Work Experience</h2>
+          <Text tag="h2">Work Experience</Text>
           <WorkExperience experience={data.workExperience} />
         </article>
         <article>
-          <h2 {...int}>Projects</h2>
+          <Text tag="h2">Projects</Text>
           <div className={`${styles.cluster} ${styles.start}`}>
             {data.projects.map((p) => (
               <Link
@@ -65,10 +62,10 @@ export default function Home() {
                 className={styles.card}
                 href={p.links[0].url}
               >
-                <h4 {...int}>
+                <Text tag="h4">
                   {p.title} <span>-&gt;</span>
-                </h4>
-                <p {...int}>{p.description}</p>
+                </Text>
+                <Text>{p.description}</Text>
               </Link>
             ))}
           </div>
