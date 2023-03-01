@@ -21,8 +21,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             onClick={() => setSelected(s)}
             data-selected={selected.name === s.name}
           >
-            <Stack>
-              <div className={styles.description}>
+            <Stack className={styles.description}>
                 <p
                   style={{
                     width: `12ch`,
@@ -40,7 +39,6 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
                   />
                   <span>{s.name}</span>
                 </p>
-              </div>
             </Stack>
           </li>
         ))}

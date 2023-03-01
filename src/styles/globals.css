@@ -114,22 +114,7 @@ ul, ol {
   min-height: fit-content;
 }
 
-h2 {
-  margin-bottom: 0.5rem;
-}
-
 h1, h2, h3, h4 {
   color: #ffb86c;
   text-transform: uppercase;
-}
-
-article {
-  position: relative;
-  padding: 0 1rem;
-}
-
-@media screen and (max-width: 1024px) {
-  :root {
-    font-size: 0.85rem;
-  }
 }

@@ -27,7 +27,7 @@ export const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
       display: `flex`,
       flexWrap: `wrap`,
       flexDirection: direction,
-      gap: `${gap}rem`,
+      gap: `${gap * 1.1}rem`,
       justifyContent: justify,
       alignItems: align,
     }}

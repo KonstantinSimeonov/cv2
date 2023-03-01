@@ -20,8 +20,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Stack tag="main">
-        <Stack tag="header">
+      <Stack tag="main" gap={2} className={styles.main}>
+        <Stack tag="header" gap={1}>
           <Text tag="h1">Konstantin Simeonov</Text>
 
           <Stack
@@ -45,15 +45,15 @@ export default function Home() {
             />
           </Stack>
         </Stack>
-        <article>
+        <Stack tag="article" gap={1}>
           <Text tag="h2">Skills</Text>
           <Skills skills={data.skills} />
-        </article>
-        <article>
+        </Stack>
+        <Stack tag="article" gap={1}>
           <Text tag="h2">Work Experience</Text>
           <WorkExperience experience={data.workExperience} />
-        </article>
-        <article>
+        </Stack>
+        <Stack tag="article" gap={1}>
           <Text tag="h2">Projects</Text>
           <Stack direction="row" align="flex-start">
             {data.projects.map((p) => (
@@ -70,7 +70,7 @@ export default function Home() {
               </Link>
             ))}
           </Stack>
-        </article>
+        </Stack>
       </Stack>
       <Stack
         tag="footer"
