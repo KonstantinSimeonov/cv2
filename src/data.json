@@ -130,7 +130,7 @@
         },
         {
             "title": "tsx-ctrl-statements",
-            "description": "Typescript compiler plugin that adds control flow elements to jsx.",
+            "description": "Typescript compiler plugin that adds control flow elements to jsx. Currently sitting at 4K weekly downloads on npm.",
             "links": [
                 {
                     "url": "https://github.com/KonstantinSimeonov/tsx-control-statements"
@@ -157,6 +157,15 @@
                 }
             ],
             "priority": 10
+        },
+        {
+            "title": "pastes.konsimeonov.lol",
+            "description": "Web app for sharing code with multiple files per paste, private pastes, code highlighting and more. Build with Nextjs, Postgres and AWS.",
+            "links": [
+                {
+                    "url": "https://pastes.konsimeonov.lol"
+                }
+            ]
         }
     ],
     "skills": [
