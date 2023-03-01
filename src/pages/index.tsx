@@ -21,7 +21,7 @@ export default function Home() {
       </Head>
 
       <Stack tag="main">
-        <header className={`${styles.stack}`}>
+        <Stack tag="header">
           <Text tag="h1">Konstantin Simeonov</Text>
 
           <Stack
@@ -44,7 +44,7 @@ export default function Home() {
               alt="pic of me"
             />
           </Stack>
-        </header>
+        </Stack>
         <article>
           <Text tag="h2">Skills</Text>
           <Skills skills={data.skills} />
