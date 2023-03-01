@@ -54,13 +54,11 @@ export default function Home() {
           <h2 {...int}>Work Experience</h2>
           <div className={styles.split}>
             {(() => {
-              const leakySod = <div className={styles[`leaky-sod`]} />;
               const we = data.workExperience.map((w, i) => (
                 <div
                   key={w.location}
                   className={`${styles.work} ${styles.stack}`}
                 >
-                  {i % 2 === 1 ? leakySod : null}
                   <div>
                     <h4 {...int}>
                       {w.location} ({w.jobTitle})
@@ -74,36 +72,15 @@ export default function Home() {
                       <p key={d}>{d}</p>
                     ))}
                   </ul>
-                  {i % 2 === 0 ? leakySod : null}
                 </div>
-              ));
-
-              const [top, bottom] = we.reduce<React.ReactNode[][]>(
-                (rl, x, i) => {
-                  rl[i % 2].push(x);
-                  return rl;
-                },
-                [[], []]
-              );
+              )).reverse();
 
               const cn = `${styles.cluster} ${styles.evenly} ${styles.stretch}`;
 
               return (
-                <>
                   <div style={{ flexWrap: `nowrap` }} className={cn}>
-                    {top}
+                    {we}
                   </div>
-                  <div className={`${styles.stack} ${styles.splitter}`}>
-                    <time {...int}>2015</time>
-                    <hr />
-                    <time {...int} style={{ alignSelf: `flex-end` }}>
-                      {new Date().getFullYear()}
-                    </time>
-                  </div>
-                  <div style={{ flexWrap: `nowrap` }} className={cn}>
-                    {bottom}
-                  </div>
-                </>
               );
             })()}
           </div>
