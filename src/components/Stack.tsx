@@ -25,6 +25,7 @@ export const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
     style={{
       ...sx,
       display: `flex`,
+      flexWrap: `wrap`,
       flexDirection: direction,
       gap: `${gap}rem`,
       justifyContent: justify,

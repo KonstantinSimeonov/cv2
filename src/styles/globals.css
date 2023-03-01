@@ -128,14 +128,6 @@ article {
   padding: 0 1rem;
 }
 
-h2 {
-  position: absolute;
-  transform: rotate(270deg) translate(-120%, -60%);
-  transform-origin: 0 0;
-  left: 0;
-  top: 0;
-}
-
 @media screen and (max-width: 1024px) {
   :root {
     font-size: 0.85rem;

@@ -7,9 +7,10 @@ import Link from "next/link";
 import ImgMap from "@/images";
 import * as React from "react";
 import { Skills } from "@/components/Skills";
+import { Stack } from "@/components/Stack";
+import { WorkExperience } from "@/components/WorkExperience";
 
 const inter = Inter({ subsets: ["latin"] });
-
 const int = { className: inter.className } as const;
 
 export default function Home() {
@@ -52,38 +53,7 @@ export default function Home() {
         </article>
         <article>
           <h2 {...int}>Work Experience</h2>
-          <div className={styles.split}>
-            {(() => {
-              const we = data.workExperience.map((w, i) => (
-                <div
-                  key={w.location}
-                  className={`${styles.work} ${styles.stack}`}
-                >
-                  <div>
-                    <h4 {...int}>
-                      {w.location} ({w.jobTitle})
-                    </h4>
-                    <time {...int}>
-                      {w.from} - {w.to}
-                    </time>{" "}
-                  </div>
-                  <ul className={`${styles.description} ${styles.stack}`}>
-                    {w.descriptions.map((d) => (
-                      <p key={d}>{d}</p>
-                    ))}
-                  </ul>
-                </div>
-              )).reverse();
-
-              const cn = `${styles.cluster} ${styles.evenly} ${styles.stretch}`;
-
-              return (
-                  <div style={{ flexWrap: `nowrap` }} className={cn}>
-                    {we}
-                  </div>
-              );
-            })()}
-          </div>
+          <WorkExperience experience={data.workExperience} />
         </article>
         <article>
           <h2 {...int}>Projects</h2>
