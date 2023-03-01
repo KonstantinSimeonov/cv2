@@ -79,7 +79,7 @@ export default function Home() {
         className={styles.footer}
       >
         <a
-          href="https://kscv.vercel.app"
+          href="https://konsimeonov.lol"
           onClick={(e) => {
             e.preventDefault();
             import(`html2pdf.js`).then(({ default: html2pdf }) => {
