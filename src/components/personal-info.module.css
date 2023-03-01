@@ -1,0 +1,12 @@
+.photo {
+  height: 10%;
+  width: 10%;
+  min-height: 100px;
+  min-width: 100px;
+  transform: rotate(10deg);
+  transition: transform 0.3s ease-out;
+}
+
+.photo:hover {
+  transform: rotate(0deg);
+}

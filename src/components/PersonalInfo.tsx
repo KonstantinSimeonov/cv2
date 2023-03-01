@@ -1,10 +1,10 @@
 import ExportedImage from "next-image-export-optimizer";
-import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import ImgMap from "@/images";
 import * as React from "react";
 import { Stack } from "@/components/Stack";
 import { Text } from "@/components/Text";
+import styles from "./personal-info.module.css"
 
 export const PersonalInfo: React.FC<{
   contacts: readonly {
