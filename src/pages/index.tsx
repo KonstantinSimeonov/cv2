@@ -4,8 +4,9 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import data from "@/data.json";
 import Link from "next/link";
-import { Tooltip } from "@/components/Tooltip";
-import ImgMap from "@/images"
+import ImgMap from "@/images";
+import * as React from "react";
+import { Skills } from "@/components/Skills";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +24,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <header className={`${styles.stack}`}>
-          <h1 {...int} style={{ textDecoration: `underline` }}>Konstantin Simeonov</h1>
+          <h1 {...int}>Konstantin Simeonov</h1>
 
           <div
             className={`${styles.cluster} ${styles.between} ${styles.padding}`}
@@ -47,28 +48,7 @@ export default function Home() {
         </header>
         <article>
           <h2 {...int}>Skills</h2>
-          <ol className={styles.cluster} style={{ paddingLeft: `1.5rem` }}>
-            {data.skills.map((s) => (
-              <li key={s.name}>
-                <Tooltip content={s.description}>
-                  <div
-                    className={styles.stack}
-                    style={{ alignItems: `center` }}
-                  >
-                    <ExportedImage
-                      src={ImgMap[s.img_url]}
-                      height="45"
-                      width="40"
-                      alt="typescript"
-                    />
-                    <div className={styles.description}>
-                      <p style={{ maxWidth: `16ch` }}>{s.name}</p>
-                    </div>
-                  </div>
-                </Tooltip>
-              </li>
-            ))}
-          </ol>
+          <Skills skills={data.skills} />
         </article>
         <article>
           <h2 {...int}>Work Experience</h2>
@@ -147,9 +127,7 @@ export default function Home() {
           </div>
         </article>
       </main>
-      <footer
-        className={`${styles.cluster} ${styles.evenly} ${styles.footer}`}
-      >
+      <footer className={`${styles.cluster} ${styles.evenly} ${styles.footer}`}>
         <a
           href="https://kscv.vercel.app"
           onClick={(e) => {

@@ -363,6 +363,11 @@ a.card {
   border-top: 1px dashed #ffb86c;
 }
 
+.skill:hover p, .skill[data-selected=true] p {
+  cursor: pointer;
+  background: rgba(var(--callout-rgb), 1);
+  border: 1px solid rgba(var(--callout-border-rgb), 1);
+}
 
 @media screen and (max-width: 1024px) {
   .footer {
