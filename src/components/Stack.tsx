@@ -16,7 +16,7 @@ export const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
   direction = `column`,
   gap = 1,
   justify = `flex-start`,
-  align = `center`,
+  align = `stretch`,
   sx = {},
   className
 }) => (

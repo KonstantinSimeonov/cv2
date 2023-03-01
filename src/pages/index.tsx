@@ -20,7 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <Stack tag="main">
         <header className={`${styles.stack}`}>
           <Text tag="h1">Konstantin Simeonov</Text>
 
@@ -71,7 +71,7 @@ export default function Home() {
             ))}
           </Stack>
         </article>
-      </main>
+      </Stack>
       <Stack
         tag="footer"
         direction="row"

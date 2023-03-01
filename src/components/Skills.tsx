@@ -12,8 +12,8 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   const [selected, setSelected] = React.useState(skills[0]);
 
   return (
-    <Stack sx={{ paddingLeft: `1.5rem` }} align="flex-start">
-      <ol className={styles.cluster}>
+    <Stack align="flex-start">
+      <Stack tag="ol" direction="row">
         {skills.map((s) => (
           <li
             className={styles.skill}
@@ -44,7 +44,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             </Stack>
           </li>
         ))}
-      </ol>
+      </Stack>
       <Stack tag="section" className={styles.description}>
         <h4>{selected.name}</h4>
         <p>{selected.description}</p>
