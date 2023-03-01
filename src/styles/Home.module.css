@@ -200,49 +200,6 @@ a.card {
   }
 }
 
-.cluster {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.evenly {
-  justify-content: space-evenly;
-}
-
-.stretch {
-  align-items: stretch;
-}
-
-.start {
-  align-items: flex-start;
-}
-
-.between {
-  justify-content: space-between;
-}
-
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.split > * {
-  padding: 1rem;
-}
-
-.split hr {
-  height: 0.5rem;
-  background-color: #ffb86c;
-  width: 100%;
-}
-
-.splitter {
-  margin: -3rem 0;
-}
-
 .photo {
   height: 10%;
   width: 10%;
