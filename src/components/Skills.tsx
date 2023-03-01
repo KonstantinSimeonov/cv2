@@ -21,16 +21,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             onClick={() => setSelected(s)}
             data-selected={selected.name === s.name}
           >
-            <Stack className={styles.description}>
-                <p
-                  style={{
-                    width: `12ch`,
-                    display: `flex`,
-                    flexDirection: `column`,
-                    alignItems: `center`,
-                    gap: `0.5rem`,
-                  }}
-                >
+            <Stack className={styles.description} align="center" sx={{ width: `14ch` }}>
                   <ExportedImage
                     src={ImgMap[s.img_url]}
                     height="45"
@@ -38,7 +29,6 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
                     alt="typescript"
                   />
                   <span>{s.name}</span>
-                </p>
             </Stack>
           </li>
         ))}

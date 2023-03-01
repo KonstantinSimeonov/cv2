@@ -1,6 +1,5 @@
 import { Stack } from "@/components/Stack";
 import { Text } from "./Text";
-import styles from "@/styles/Home.module.css";
 
 export const WorkExperience: React.FC<{
   experience: readonly {
@@ -25,9 +24,9 @@ export const WorkExperience: React.FC<{
           </div>
           <Stack tag="ul" direction="row" align="flex-start">
             {job.descriptions.map((d) => (
-              <li style={{ flex: 1 }} key={d} className={styles.description}>
-                <p>{d}</p>
-              </li>
+              <Text tag="li" variant="description" sx={{ flex: 1 }} key={d}>
+                {d}
+              </Text>
             ))}
           </Stack>
         </Stack>

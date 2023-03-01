@@ -20,7 +20,7 @@
   gap: 0.5rem;
 }
 
-.description p {
+.description {
   color: #19f9d8;
   position: relative;
   margin: 0;
@@ -122,7 +122,7 @@ a.card {
   }
 }
 
-.skill:hover p, .skill[data-selected=true] p {
+.skill:hover .description, .skill[data-selected=true] .description {
   cursor: pointer;
   background: rgba(var(--callout-rgb), 1);
   border: 1px solid rgba(var(--callout-border-rgb), 1);
