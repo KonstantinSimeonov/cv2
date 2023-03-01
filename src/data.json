@@ -172,7 +172,7 @@
         {
             "name": "Algorithms",
             "description": "I've always had a lot of fun implementing various data structures and solving competetive programming problems - take a look at my github if you haven't done so already!",
-            "priority": 6,
+            "priority": 4,
             "img_url": "Algo"
         },
         {
@@ -184,13 +184,12 @@
         {
             "name": "NodeJS",
             "description": "Node is the backend platform I feel most comfortable with - I love the opportunity to reuse code between frontend and backend, the abundance of libraries and the ease of prototyping. I've been using Node to build apps with Express, NextJS and Electron.",
-            "priority": 1,
+            "priority": 5,
             "img_url": "Node"
         },
         {
             "name": "Mentoring",
             "description": "Mentoring is a natural part of working in a team - I had the opportunity to mentor a lot of students as a teacher in TelerikAcademy and that helped me later successfully mentor fresh team members in Coursera and Synthesis. I'm also mentoring several people outside of work - check out https://latrovaliev.dev/, he's my best student!",
-            "priority": 4,
             "img_url": "Mentor"
         },
         {
@@ -206,6 +205,7 @@
         {
             "name": "SQL",
             "description": "Building projects like editable video transcriptions (Coursera), 3d material store (ChaosGroup), student system with different roles, user search, event scheduling (Synthesis) made me appreciate how powerful and fun, yet also frustrating and complex relational databases/SQL can be.",
+            "priority": 4,
             "img_url": "SQL"
         },
         {

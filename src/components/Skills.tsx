@@ -5,16 +5,17 @@ import styles from "@/styles/Home.module.css";
 import { Stack } from "./Stack";
 
 type SkillsProps = {
-  skills: readonly { name: string; description: string; img_url: string }[];
+  skills: readonly { name: string; description: string; img_url: string; priority?: number }[];
 };
 
 export const Skills: React.FC<SkillsProps> = ({ skills }) => {
-  const [selected, setSelected] = React.useState(skills[0]);
+  const sortedSkills = skills.slice().sort(({ priority: a = 1000 }, { priority: b = 1000 }) => a - b)
+  const [selected, setSelected] = React.useState(sortedSkills[0]);
 
   return (
     <Stack justify="stretch" align="start" direction="row" sx={{ flexWrap: `nowrap` }}>
       <Stack tag="ol" direction="row" sx={{ width: `35%`, maxHeight: `30rem`, overflow: `auto` }}>
-        {skills.map((s) => (
+        {sortedSkills.map((s) => (
           <li
             className={styles.skill}
             key={s.name}
