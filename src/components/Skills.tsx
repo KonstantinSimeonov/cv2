@@ -12,8 +12,8 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   const [selected, setSelected] = React.useState(skills[0]);
 
   return (
-    <Stack align="flex-start">
-      <Stack tag="ol" direction="row">
+    <Stack justify="stretch" align="start" direction="row" sx={{ flexWrap: `nowrap` }}>
+      <Stack tag="ol" direction="row" sx={{ width: `35%`, maxHeight: `30rem`, overflow: `auto` }}>
         {skills.map((s) => (
           <li
             className={styles.skill}
@@ -21,21 +21,25 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             onClick={() => setSelected(s)}
             data-selected={selected.name === s.name}
           >
-            <Stack className={styles.description} align="center" sx={{ width: `14ch` }}>
-                  <ExportedImage
-                    src={ImgMap[s.img_url]}
-                    height="45"
-                    width="40"
-                    alt="typescript"
-                  />
-                  <span>{s.name}</span>
+            <Stack
+              className={styles.description}
+              align="center"
+              sx={{ width: `14ch` }}
+            >
+              <ExportedImage
+                src={ImgMap[s.img_url]}
+                height="45"
+                width="40"
+                alt="typescript"
+              />
+              <span>{s.name}</span>
             </Stack>
           </li>
         ))}
       </Stack>
-      <Stack tag="section" className={styles.description}>
+      <Stack tag="section" sx={{ width: `60%` }} className={styles.description}>
         <h4>{selected.name}</h4>
-        <p>{selected.description}</p>
+        <p style={{ overflowWrap: `anywhere` }}>{selected.description}</p>
       </Stack>
     </Stack>
   );
