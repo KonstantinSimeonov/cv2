@@ -10,6 +10,7 @@ import { Stack } from "@/components/Stack";
 import { WorkExperience } from "@/components/WorkExperience";
 import { Text } from "@/components/Text";
 import { Footer } from "@/components/Footer";
+import {Projects} from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -56,21 +57,7 @@ export default function Home() {
         </Stack>
         <Stack tag="article" gap={1}>
           <Text tag="h2">Projects</Text>
-          <Stack direction="row" align="flex-start">
-            {data.projects.map((p) => (
-              <Link
-                key={p.title}
-                target="_blank"
-                className={styles.card}
-                href={p.links[0].url}
-              >
-                <Text tag="h4">
-                  {p.title} <span>-&gt;</span>
-                </Text>
-                <Text>{p.description}</Text>
-              </Link>
-            ))}
-          </Stack>
+          <Projects projects={data.projects} />
         </Stack>
       </Stack>
       <Footer />
