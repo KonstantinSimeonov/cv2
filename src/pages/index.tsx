@@ -98,7 +98,7 @@ export default function Home() {
         >
           Generate PDF
         </a>
-        <a href="https://kscv.vercel.app">
+        <a href="https://konsimeonov.lol">
           The website is way cooler than the PDF
         </a>
         <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">
