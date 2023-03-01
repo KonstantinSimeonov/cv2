@@ -24,17 +24,18 @@ export default function Home() {
         <header className={`${styles.stack}`}>
           <Text tag="h1">Konstantin Simeonov</Text>
 
-          <div
-            className={`${styles.cluster} ${styles.between} ${styles.padding}`}
-            style={{ flexWrap: `nowrap` }}
+          <Stack
+            direction="row"
+            justify="space-between"
+            sx={{ flexWrap: `nowrap` }}
           >
-            <div className={styles.stack}>
+            <Stack align="flex-start" gap={0.5}>
               {data.personalInfo.contacts.map((c) => (
                 <Link key={c.url} target="_blank" href={c.url}>
                   <Text>{c.text}</Text>
                 </Link>
               ))}
-            </div>
+            </Stack>
             <ExportedImage
               className={styles.photo}
               src={ImgMap.Photo}
@@ -42,7 +43,7 @@ export default function Home() {
               width="150"
               alt="pic of me"
             />
-          </div>
+          </Stack>
         </header>
         <article>
           <Text tag="h2">Skills</Text>
@@ -54,7 +55,7 @@ export default function Home() {
         </article>
         <article>
           <Text tag="h2">Projects</Text>
-          <div className={`${styles.cluster} ${styles.start}`}>
+          <Stack direction="row" align="flex-start">
             {data.projects.map((p) => (
               <Link
                 key={p.title}
@@ -68,10 +69,15 @@ export default function Home() {
                 <Text>{p.description}</Text>
               </Link>
             ))}
-          </div>
+          </Stack>
         </article>
       </main>
-      <footer className={`${styles.cluster} ${styles.evenly} ${styles.footer}`}>
+      <Stack
+        tag="footer"
+        direction="row"
+        justify="space-evenly"
+        className={styles.footer}
+      >
         <a
           href="https://kscv.vercel.app"
           onClick={(e) => {
@@ -98,7 +104,7 @@ export default function Home() {
         <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">
           Built by me xD
         </Link>
-      </footer>
+      </Stack>
     </>
   );
 }
