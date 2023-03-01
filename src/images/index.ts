@@ -10,6 +10,8 @@ import Linux from "./pemgvin.jpg"
 import SQL from "./pgsql.png"
 import React from "./react.png"
 import TS from "./ts.png"
+import Nextjs from "./nextjs.png"
+import AWS from "./aws.png"
 
 const ImgMap: Record<string, StaticImageData>  = {
   Algo,
@@ -23,6 +25,8 @@ const ImgMap: Record<string, StaticImageData>  = {
   SQL,
   React,
   TS,
+  Nextjs,
+  AWS
 }
 
 export default ImgMap

@@ -46,7 +46,7 @@
         {
             "from": "April 2017",
             "to": "July 2019",
-            "jobTitle": "JavaScript Developer",
+            "jobTitle": "Mid-level JavaScript Developer",
             "location": "Chaosgroup",
             "descriptions": [
                 "Worked on V-Ray for Sketchup/Rhino/Revit, which provides a cross-platform UI for interacting with V-Ray",
@@ -57,7 +57,7 @@
         {
             "from": "July 2019",
             "to": "January 2020",
-            "jobTitle": "Scala Developer",
+            "jobTitle": "Mid-level Scala Developer",
             "location": "Pontica Solutions Ltd",
             "descriptions": [
                 "Scheduled emails leveraging Akka and Apache Kafka",
@@ -69,7 +69,7 @@
         {
             "from": "January 2020",
             "to": "March 2022",
-            "jobTitle": "Software Developer",
+            "jobTitle": "Senior Software Developer",
             "location": "Coursera",
             "descriptions": [
                 "Developed rhyme.com, an in-browser interactive studying VM environment, complete with audio/video calls and video instructions",
@@ -81,7 +81,7 @@
         {
             "from": "March 2022",
             "to": "November 2022",
-            "jobTitle": "Full-Stack Developer",
+            "jobTitle": "Senior Full-Stack Developer",
             "location": "Synthesis",
             "descriptions": [
                 "Worked on portal.synthesis.is with nextjs, typeorm, mysql, zod and react-query",
@@ -224,6 +224,18 @@
             "description": "Before I became a functional programming hipster, I've explored OOP concepts (through working with C#, JS and Scala) such as class/prototypal inheritance, object composition, polymorphism and encapsulation. I also became familiar with design patterns such as decorators, chain of responsibility, command pattern, composite objects, factories and mediators.",
             "priority": 9,
             "img_url": "Oop"
+        },
+        {
+            "name": "NextJS",
+            "description": "I've used NextJS to optimize page loading times via SSR (Coursera), to build a production full-stack web app (portal.synthesis.is, pastes.konsimeonov.lol) and to generate static sites (this site). Server-side props, routing, nextauth, configuring nextjs builds, dynamic imports, custom middlewares and api routes are features which I use regularly and confidently.",
+            "img_url": "Nextjs",
+            "priority": 4
+        },
+        {
+            "name": "AWS",
+            "description": "I've used SQS to implement notifications and client-facing APIs, AWS Transcribe to implement automatic subtitle generation for video lectures, S3 for storing environment variables, subtitles and hosting static sites, EC2 + ECS + ECR to deploy servers and jobs, RDS to provision Postgres instances, IAM for role/access management and Route 53/VPCs to secure and expose web applications. I'm also using the aws cli in github actions to automate deployments.",
+            "img_url": "AWS",
+            "priority": 3
         }
     ]
 }
