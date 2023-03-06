@@ -15,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Konstantin Simeonov</title>
         <meta name="description" content="Konstantin Simeonov resume" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.85" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
