@@ -1,4 +1,5 @@
 import { Stack } from "@/components/Stack";
+import {PrinvInvis} from "./PrintInvis";
 import { Text } from "./Text";
 
 export const WorkExperience: React.FC<{
@@ -22,6 +23,7 @@ export const WorkExperience: React.FC<{
               {job.from} - {job.to}
             </Text>
           </div>
+          <PrinvInvis link={false}>
           <Stack tag="ul" direction="row" align="flex-start">
             {job.descriptions.map((d) => (
               <Text tag="li" variant="description" sx={{ flex: 1 }} key={d}>
@@ -29,6 +31,7 @@ export const WorkExperience: React.FC<{
               </Text>
             ))}
           </Stack>
+</PrinvInvis>
         </Stack>
       ))
       .reverse()}

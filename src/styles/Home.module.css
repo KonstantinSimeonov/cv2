@@ -134,3 +134,16 @@ a.card {
   border: 1px solid rgba(var(--callout-border-rgb), 1);
   text-decoration: underline;
 }
+
+.skills {
+  width: 35%;
+  max-height: 30rem;
+  overflow: auto;
+}
+
+@media print {
+  .skills {
+    width: 100%;
+    max-height: auto;
+  }
+}

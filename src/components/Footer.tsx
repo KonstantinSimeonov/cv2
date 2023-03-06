@@ -2,12 +2,12 @@ import styles from "./footer.module.css"
 import { Stack } from "@/components/Stack";
 import Link from "next/link";
 
-export const Footer = () => (
+export const Footer: React.FC<{ className?: string }> = ({ className }) => (
   <Stack
     tag="footer"
     direction="row"
     justify="space-evenly"
-    className={styles.footer}
+    className={`${styles.footer} ${className}`}
   >
     <a
       href="https://konsimeonov.lol"

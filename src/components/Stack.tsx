@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./stack.module.css"
 
 type StackProps = {
   direction?: React.CSSProperties[`flexDirection`];
@@ -21,11 +22,11 @@ export const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
   className
 }) => (
   <Tag
-    className={className}
+    className={`${styles.stack} ${className}`}
     style={{
+      flexWrap: `wrap`,
       ...sx,
       display: `flex`,
-      flexWrap: `wrap`,
       flexDirection: direction,
       gap: `${gap * 1.1}rem`,
       justifyContent: justify,

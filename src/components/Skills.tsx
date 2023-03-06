@@ -3,18 +3,31 @@ import ImgMap from "@/images";
 import * as React from "react";
 import styles from "@/styles/Home.module.css";
 import { Stack } from "./Stack";
+import { PrinvInvis } from "./PrintInvis";
 
 type SkillsProps = {
-  skills: readonly { name: string; description: string; img_url: keyof typeof ImgMap; priority?: number }[];
+  skills: readonly {
+    name: string;
+    description: string;
+    img_url: keyof typeof ImgMap;
+    priority?: number;
+  }[];
 };
 
 export const Skills: React.FC<SkillsProps> = ({ skills }) => {
-  const sortedSkills = skills.slice().sort(({ priority: a = 1000 }, { priority: b = 1000 }) => a - b)
+  const sortedSkills = skills
+    .slice()
+    .sort(({ priority: a = 1000 }, { priority: b = 1000 }) => a - b);
   const [selected, setSelected] = React.useState(sortedSkills[0]);
 
   return (
-    <Stack justify="stretch" align="start" direction="row" sx={{ flexWrap: `nowrap` }}>
-      <Stack tag="ol" direction="row" gap={0.5} sx={{ width: `35%`, maxHeight: `30rem`, overflow: `auto` }}>
+    <Stack
+      justify="stretch"
+      align="start"
+      direction="row"
+      sx={{ flexWrap: `nowrap` }}
+    >
+      <Stack className={styles.skills} tag="ol" direction="row" gap={0.5}>
         {sortedSkills.map((s) => (
           <li
             className={styles.skill}
@@ -22,10 +35,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             onClick={() => setSelected(s)}
             data-selected={selected.name === s.name}
           >
-            <Stack
-              className={styles.description}
-              align="center"
-            >
+            <Stack className={styles.description} align="center">
               <ExportedImage
                 src={ImgMap[s.img_url]}
                 height="45"
@@ -37,10 +47,16 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           </li>
         ))}
       </Stack>
-      <Stack tag="section" sx={{ width: `55%` }} className={styles.description}>
-        <h4>{selected.name}</h4>
-        <p style={{ overflowWrap: `anywhere` }}>{selected.description}</p>
-      </Stack>
+      <PrinvInvis link={false}>
+        <Stack
+          tag="section"
+          sx={{ width: `55%` }}
+          className={styles.description}
+        >
+          <h4>{selected.name}</h4>
+          <p style={{ overflowWrap: `anywhere` }}>{selected.description}</p>
+        </Stack>
+      </PrinvInvis>
     </Stack>
   );
 };
