@@ -10,21 +10,10 @@ export const Footer: React.FC<{ className?: string }> = ({ className }) => (
     className={`${styles.footer} ${className}`}
   >
     <a
-      href="https://konsimeonov.lol"
+      href="#"
       onClick={(e) => {
         e.preventDefault();
-        import(`html2pdf.js`).then(({ default: html2pdf }) => {
-          html2pdf()
-            .set({
-              margin: 0.5,
-              filename: `Konstantin Simeonov Resume.pdf`,
-              image: { type: `png`, quality: 10 },
-              html2canvas: { scale: 2 },
-              jsPDF: { format: `A2` },
-            })
-            .from(document.body)
-            .save();
-        });
+        window.print();
       }}
     >
       Generate PDF

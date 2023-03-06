@@ -128,11 +128,13 @@ a.card {
   width: 12ch;
 }
 
-.skill:hover .description, .skill[data-selected=true] .description {
-  cursor: pointer;
-  background: rgba(var(--callout-rgb), 1);
-  border: 1px solid rgba(var(--callout-border-rgb), 1);
-  text-decoration: underline;
+@media not print {
+  .skill:hover .description, .skill[data-selected=true] .description {
+    cursor: pointer;
+    background: rgba(var(--callout-rgb), 1);
+    border: 1px solid rgba(var(--callout-border-rgb), 1);
+    text-decoration: underline;
+  }
 }
 
 .skills {
@@ -146,4 +148,5 @@ a.card {
     width: 100%;
     max-height: auto;
   }
+
 }

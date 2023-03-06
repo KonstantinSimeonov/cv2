@@ -120,3 +120,15 @@ h1, h2, h3, h4 {
   color: #ffb86c;
   text-transform: uppercase;
 }
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+    background-color: black;
+  }
+
+  * {
+    font-weight: bold;
+  }
+}
