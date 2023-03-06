@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import data from "@/data.json";
+import data from "@/data";
 import { Skills } from "@/components/Skills";
 import { Stack } from "@/components/Stack";
 import { WorkExperience } from "@/components/WorkExperience";

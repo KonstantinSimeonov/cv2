@@ -5,7 +5,7 @@ import styles from "@/styles/Home.module.css";
 import { Stack } from "./Stack";
 
 type SkillsProps = {
-  skills: readonly { name: string; description: string; img_url: string; priority?: number }[];
+  skills: readonly { name: string; description: string; img_url: keyof typeof ImgMap; priority?: number }[];
 };
 
 export const Skills: React.FC<SkillsProps> = ({ skills }) => {
