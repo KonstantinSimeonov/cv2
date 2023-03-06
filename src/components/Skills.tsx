@@ -3,7 +3,7 @@ import ImgMap from "@/images";
 import * as React from "react";
 import styles from "@/styles/Home.module.css";
 import { Stack } from "./Stack";
-import { PrinvInvis } from "./PrintInvis";
+import { PrintInvis } from "./PrintInvis";
 
 type SkillsProps = {
   skills: readonly {
@@ -47,7 +47,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           </li>
         ))}
       </Stack>
-      <PrinvInvis link={false}>
+      <PrintInvis link={false}>
         <Stack
           tag="section"
           sx={{ width: `55%` }}
@@ -56,7 +56,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           <h4>{selected.name}</h4>
           <p style={{ overflowWrap: `anywhere` }}>{selected.description}</p>
         </Stack>
-      </PrinvInvis>
+      </PrintInvis>
     </Stack>
   );
 };

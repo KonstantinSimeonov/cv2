@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 import { Projects } from "@/components/Projects";
 import { PersonalInfo } from "@/components/PersonalInfo";
 import ImgMap from "@/images";
-import {PrinvInvis} from "@/components/PrintInvis";
+import {PrintInvis} from "@/components/PrintInvis";
 
 export default function Home() {
   return (
@@ -50,16 +50,16 @@ export default function Home() {
           <WorkExperience experience={data.workExperience} />
         </Stack>
 
-          <PrinvInvis>
+          <PrintInvis>
         <Stack tag="article" gap={1}>
           <Text tag="h2">Projects</Text>
           <Projects projects={data.projects} />
         </Stack>
-</PrinvInvis>
+</PrintInvis>
       </Stack>
-      <PrinvInvis link={false}>
+      <PrintInvis link={false}>
       <Footer />
-</PrinvInvis>
+</PrintInvis>
     </>
   );
 }
