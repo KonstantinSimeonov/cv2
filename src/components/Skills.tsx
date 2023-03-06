@@ -14,7 +14,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
 
   return (
     <Stack justify="stretch" align="start" direction="row" sx={{ flexWrap: `nowrap` }}>
-      <Stack tag="ol" direction="row" sx={{ width: `35%`, maxHeight: `30rem`, overflow: `auto` }}>
+      <Stack tag="ol" direction="row" gap={0.5} sx={{ width: `35%`, maxHeight: `30rem`, overflow: `auto` }}>
         {sortedSkills.map((s) => (
           <li
             className={styles.skill}
@@ -25,7 +25,6 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             <Stack
               className={styles.description}
               align="center"
-              sx={{ width: `14ch` }}
             >
               <ExportedImage
                 src={ImgMap[s.img_url]}
@@ -38,7 +37,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           </li>
         ))}
       </Stack>
-      <Stack tag="section" sx={{ width: `60%` }} className={styles.description}>
+      <Stack tag="section" sx={{ width: `55%` }} className={styles.description}>
         <h4>{selected.name}</h4>
         <p style={{ overflowWrap: `anywhere` }}>{selected.description}</p>
       </Stack>

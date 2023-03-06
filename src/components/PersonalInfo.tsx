@@ -15,7 +15,7 @@ export const PersonalInfo: React.FC<{
   <Stack direction="row" justify="space-between" sx={{ flexWrap: `nowrap` }}>
     <Stack align="flex-start" gap={0.5}>
       {contacts.map(({ url, text }) => (
-        <Link key={url} target="_blank" href={url}>
+        <Link className={styles.link} key={url} target="_blank" href={url}>
           <Text>{text}</Text>
         </Link>
       ))}

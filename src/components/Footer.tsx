@@ -19,8 +19,8 @@ export const Footer = () => (
               margin: 0.5,
               filename: `Konstantin Simeonov Resume.pdf`,
               image: { type: `png`, quality: 10 },
-              html2canvas: { scale: 2, windowWidth: 800 },
-              jsPDF: { format: `A4` },
+              html2canvas: { scale: 2 },
+              jsPDF: { format: `A2` },
             })
             .from(document.body)
             .save();
@@ -29,9 +29,8 @@ export const Footer = () => (
     >
       Generate PDF
     </a>
-    <a href="https://konsimeonov.lol">The website is way cooler than the PDF</a>
     <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">
-      Built by me xD
+      Built with NextJS
     </Link>
   </Stack>
 );
