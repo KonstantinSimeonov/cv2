@@ -14,14 +14,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Konstantin Simeonov</title>
-        <meta name="description" content="Konstantin Simeonov resume" />
-        <meta name="viewport" content="width=device-width, initial-scale=0.85" />
-        <meta name="og:url" content="https://konsimeonov.lol" />
-        <meta name="og:type" content="profile" />
-        <meta name="og:description" content="Konstantin Simeonov - Software Developer, skills and work experience" />
-        <meta name="og:image" content={ImgMap.Photo.src} />
+        <title>Konstantin Simeonov - Software Developer</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <meta name="description" content="A React/Nodejs full-stack developer with 8 years of experience." />
+        <meta name="viewport" content="width=device-width, initial-scale=0.85" />
+
+        <meta name="og:url" content="https://konsimeonov.lol" />
+        <meta name="og:type" content="website" />
+        <meta name="og:description" content="A React/Nodejs full-stack developer with 8 years of experience." />
+        <meta name="og:image" content={`https://konsimeonov.lol${ImgMap.Photo.src}`} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="Konstantin Simeonov - Software Developer" />
+        <meta property="twitter:description" content="A React/Nodejs full-stack developer with 8 years of experience." />
+        <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"/ >
       </Head>
 
       <Stack tag="main" gap={2} className={styles.main}>
