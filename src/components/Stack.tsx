@@ -2,7 +2,7 @@ import React from "react";
 
 type StackProps = {
   direction?: React.CSSProperties[`flexDirection`];
-  gap?: 0.5 | 1 | 2 | 3;
+  gap?: 0 | 0.5 | 1 | 2 | 3;
   justify?: React.CSSProperties[`justifyContent`];
   align?: React.CSSProperties[`alignItems`];
   tag?: keyof React.ReactHTML;

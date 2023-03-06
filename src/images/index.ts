@@ -13,7 +13,7 @@ import TS from "./ts.png"
 import Nextjs from "./nextjs.png"
 import AWS from "./aws.png"
 
-const ImgMap: Record<string, StaticImageData>  = {
+const ImgMap  = {
   Algo,
   Git,
   Haskell,
@@ -27,6 +27,6 @@ const ImgMap: Record<string, StaticImageData>  = {
   TS,
   Nextjs,
   AWS
-}
+} satisfies Record<string, StaticImageData>
 
 export default ImgMap
