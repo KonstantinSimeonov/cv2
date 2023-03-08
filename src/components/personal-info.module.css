@@ -6,6 +6,11 @@
   transition: transform 0.3s ease-out;
 }
 
+.photo img {
+  height: 100%;
+  width: 100%;
+}
+
 @media not print {
   .photo {
     transform: rotate(10deg);

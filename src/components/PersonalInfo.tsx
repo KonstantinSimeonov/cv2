@@ -5,6 +5,7 @@ import * as React from "react";
 import { Stack } from "@/components/Stack";
 import { Text } from "@/components/Text";
 import styles from "./personal-info.module.css"
+import tss from "@/components/typewrite.module.css"
 
 export const PersonalInfo: React.FC<{
   contacts: readonly {
@@ -16,16 +17,17 @@ export const PersonalInfo: React.FC<{
     <Stack align="flex-start" gap={0.5}>
       {contacts.map(({ url, text }) => (
         <Link className={styles.link} key={url} target="_blank" href={url}>
-          <Text>{text}</Text>
+          <Text typed>{text}</Text>
         </Link>
       ))}
     </Stack>
-    <ExportedImage
-      className={styles.photo}
-      src={ImgMap.Photo}
-      height="150"
-      width="150"
-      alt="pic of me"
-    />
+    <Stack className={`${styles.photo} ${tss.fadeIn}`}>
+      <ExportedImage
+        src={ImgMap.Photo}
+        height="150"
+        width="150"
+        alt="pic of me"
+      />
+    </Stack>
   </Stack>
 );

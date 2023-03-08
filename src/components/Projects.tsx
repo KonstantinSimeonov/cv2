@@ -3,6 +3,7 @@ import { Stack } from "@/components/Stack";
 import styles from "@/styles/Home.module.css";
 import { Text } from "@/components/Text";
 import * as React from "react";
+import tss from "./typewrite.module.css"
 
 export const Projects: React.FC<{
   projects: readonly {
@@ -11,7 +12,7 @@ export const Projects: React.FC<{
     links: readonly { url: string }[];
   }[];
 }> = ({ projects }) => (
-  <Stack direction="row" align="flex-start">
+  <Stack direction="row" align="flex-start" className={tss.fadeIn}>
     {projects.map((project) => (
       <Link
         key={project.title}
