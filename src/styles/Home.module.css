@@ -3,28 +3,6 @@
   width: 100vw;
 }
 
-
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: auto auto;
-  width: var(--max-width);
-  max-width: 100%;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
-}
-
 .main::before {
   background: var(--secondary-glow);
   border-radius: 50%;
@@ -64,10 +42,6 @@
   border-radius: var(--border-radius);
 }
 
-.description .opaque {
-  background-color: rgba(var(--callout-rgb), 1);
-}
-
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -77,33 +51,5 @@
 
   .card:hover span {
     transform: translateX(4px);
-  }
-}
-
-.skill .description {
-  padding: 0.5rem;
-  width: 12ch;
-}
-
-@media not print {
-  .skill:hover .description,
-  .skill[data-selected="true"] .description {
-    cursor: pointer;
-    background: rgba(var(--callout-rgb), 1);
-    border: 1px solid rgba(var(--callout-border-rgb), 1);
-    text-decoration: underline;
-  }
-}
-
-.skills {
-  width: 35%;
-  max-height: 30rem;
-  overflow: auto;
-}
-
-@media print {
-  .skills {
-    width: 100%;
-    max-height: auto;
   }
 }

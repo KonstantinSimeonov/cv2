@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css"
 import { Stack } from "./Stack"
 import { PrintInvis } from "./PrintInvis"
 import animation from "@/styles/animation.module.css"
+import classes from "./skills.module.css"
 
 type SkillsProps = {
   skills: readonly {
@@ -29,15 +30,14 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
       className={animation.fadeIn}
       sx={{ flexWrap: `nowrap` }}
     >
-      <Stack className={styles.skills} tag="ol" direction="row" gap={0.5}>
+      <Stack className={classes.skills} tag="ol" direction="row" gap={0.5}>
         {sortedSkills.map(s => (
-          <li
-            className={styles.skill}
-            key={s.name}
-            onClick={() => setSelected(s)}
-            data-selected={selected.name === s.name}
-          >
-            <Stack className={styles.description} align="center">
+          <li key={s.name} onClick={() => setSelected(s)}>
+            <Stack
+              data-selected={selected.name === s.name}
+              className={`${styles.description} ${classes.card}`}
+              align="center"
+            >
               <ExportedImage
                 src={ImgMap[s.img_url]}
                 height="45"

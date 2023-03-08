@@ -1,0 +1,27 @@
+.card {
+  padding: 0.5rem;
+  width: 12ch;
+}
+
+@media not print {
+  .card:hover,
+  .card[data-selected="true"] {
+    cursor: pointer;
+    background: rgba(var(--callout-rgb), 1);
+    border: 1px solid rgba(var(--callout-border-rgb), 1);
+    text-decoration: underline;
+  }
+}
+
+.skills {
+  width: 35%;
+  max-height: 30rem;
+  overflow: auto;
+}
+
+@media print {
+  .skills {
+    width: 100%;
+    max-height: auto;
+  }
+}
