@@ -27,7 +27,7 @@ export const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
   sx,
 }) => {
   const classNames = [
-    animation.text,
+    `text`,
     variant === `inter` ? inter.className : classes.description,
     typed ? animation.typed : ``,
   ]

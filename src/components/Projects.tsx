@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Stack } from "@/components/Stack"
-import styles from "@/styles/Home.module.css"
+import styles from "./projects.module.css"
 import { Text } from "@/components/Text"
 import * as React from "react"
 import animation from "@/styles/animation.module.css"
