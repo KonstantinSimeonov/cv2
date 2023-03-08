@@ -50,10 +50,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-time {
-  color: var(--primary-color);
-}
-
 a {
   /* color: inherit; */
   color: var(--secondary-color);
