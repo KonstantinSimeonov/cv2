@@ -27,8 +27,10 @@ export const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
   align = `stretch`,
   sx = {},
   className,
+  ...rest
 }) => (
   <Tag
+    {...rest}
     className={`${styles.stack} ${className}`}
     style={{
       flexWrap: `wrap`,
