@@ -22,7 +22,7 @@ export const PersonalInfo: React.FC<{
     <Stack align="flex-start" gap={0.5}>
       {contacts.map(({ url, text }) => (
         <Link className={classes.link} key={url} target="_blank" href={url}>
-          <Text>{text}</Text>
+          <Text color="secondary">{text}</Text>
         </Link>
       ))}
     </Stack>

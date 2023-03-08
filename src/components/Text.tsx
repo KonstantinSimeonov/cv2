@@ -15,6 +15,7 @@ type TextProps = {
         >
       >
   sx?: React.CSSProperties
+  color?: `primary` | `secondary`
 }
 
 const inter = Inter({ subsets: ["latin"] })
@@ -24,6 +25,7 @@ export const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
   tag: Tag = `p`,
   typed = false,
   variant = `inter`,
+  color = `primary`,
   sx,
 }) => {
   const classNames = [
@@ -36,7 +38,8 @@ export const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
 
   const styles: React.CSSProperties = {
     ...sx,
-    ...(`h1h2`.includes(Tag)
+    color: `var(--${color}-color)`,
+    ...(`h1 h2`.includes(Tag)
       ? { "--typing-duration": `2s`, "--typing-step": `100` }
       : {}),
   }

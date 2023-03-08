@@ -1,6 +1,5 @@
+import * as React from "react"
 import Head from "next/head"
-import styles from "@/styles/Home.module.css"
-import data from "@/data"
 import { Skills } from "@/components/Skills"
 import { Stack } from "@/components/Stack"
 import { WorkExperience } from "@/components/WorkExperience"
@@ -10,8 +9,9 @@ import { Projects } from "@/components/Projects"
 import { PersonalInfo } from "@/components/PersonalInfo"
 import ImgMap from "@/images"
 import { PrintInvis } from "@/components/PrintInvis"
-import * as React from "react"
 import animation from "@/styles/animation.module.css"
+import classes from "@/styles/home.module.css"
+import data from "@/data"
 
 // TODO: refactor this technological terror
 const useAnimationChain = () =>
@@ -82,13 +82,13 @@ export default function Home() {
         />
       </Head>
 
-      <Stack tag="main" gap={2} className={styles.main}>
+      <Stack tag="main" gap={2} className={classes.main}>
         <Stack tag="header" gap={1}>
           <Stack gap={0} align="start">
             <Text typed tag="h1">
               Konstantin Simeonov
             </Text>
-            <Text typed sx={{ color: `#ffb86c` }}>
+            <Text typed variant="inter">
               Sofia, Bulgaria
             </Text>
           </Stack>

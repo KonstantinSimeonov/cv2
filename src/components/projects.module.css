@@ -1,6 +1,6 @@
 a.card {
   text-decoration: none;
-  color: #ffb86c;
+  color: var(--primary-color);
   font-family: inherit;
 }
 
