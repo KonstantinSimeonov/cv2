@@ -10,7 +10,8 @@
     "export": "next export",
     "img-opt": "next-image-export-optimizer",
     "export-all": "yarn build && yarn export && yarn img-opt",
-    "prettier": "prettier"
+    "prettier": "prettier",
+    "format:all": "prettier --write 'src/**/*.{ts,tsx,css}'"
   },
   "dependencies": {
     "@next/font": "13.1.6",
