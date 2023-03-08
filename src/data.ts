@@ -1,34 +1,23 @@
 export default {
   personalInfo: {
-    names: {
-      first: "Konstantin",
-      middle: "Simeonov",
-      last: "Simeonov",
-    },
     title: "Software dev and haskell/linux hobbyist",
     photoUrl: "target/web/public/main/konche-bonche.jpg",
-    aboutMe:
-      "Located in Sofia, Bulgaria, currently busy with mentoring 2 people, creating challenges for geektastic.com and reading the Designing Data Intensive Applications book.",
     contacts: [
       {
         url: "https://github.com/KonstantinSimeonov",
         text: "github",
-        urlType: "url",
       },
       {
         url: "https://www.hackerrank.com/kon_trombon",
         text: "hackerrank",
-        urlType: "url",
       },
       {
         url: "tel:+359 885 032 502",
         text: "+359 885 032 502",
-        urlType: "phone",
       },
       {
         url: "mailto:kon.simeonov@protonmail.com",
         text: "kon.simeonov@protonmail.com",
-        urlType: "email",
       },
     ],
   },
@@ -92,88 +81,36 @@ export default {
       ],
     },
   ],
-  languages: [
-    {
-      languageName: "English",
-      level: "Proficient",
-    },
-    {
-      languageName: "German",
-      level: "Advanced",
-    },
-  ],
-  educations: [
-    {
-      educationTitle: "Web Development",
-      location: "Telerik Academy",
-      from: "January 2015",
-      to: "March 2016",
-      certificateUrl: [
-        "https://telerikacademy.com/Certificates/View/1980/6b7b6f44",
-      ],
-      linkText: ["telerikacademy.com/1980/6b7b6f44"],
-    },
-    {
-      educationTitle: "Bachelor in Software Engineering (not completed)",
-      location: "FMI, Sofia University 'St. Kliment Ohridski'",
-      from: "October 2013",
-      to: "January 2015",
-    },
-  ],
   projects: [
     {
       title: "AoC 2022",
       description:
         "How I fell in love with Rust while blasting some algorithms (Advent of Code 2022 solutions).",
-      links: [
-        {
-          url: "https://github.com/KonstantinSimeonov/aoc2o22",
-        },
-      ],
-      priority: 20,
+      url: "https://github.com/KonstantinSimeonov/aoc2o22",
     },
     {
       title: "tsx-ctrl-statements",
       description:
         "Typescript compiler plugin that adds control flow elements to jsx. Currently sitting at 4K weekly downloads on npm.",
-      links: [
-        {
-          url: "https://github.com/KonstantinSimeonov/tsx-control-statements",
-        },
-      ],
-      priority: 5,
+      url: "https://github.com/KonstantinSimeonov/tsx-control-statements",
     },
     {
       title: "tsfck",
       description:
         "Pure compile-time implementation of various fun programs (fibs, primes, string ops) using typescript type language.",
-      links: [
-        {
-          url: "https://github.com/KonstantinSimeonov/tsfck",
-        },
-      ],
-      priority: 15,
+      url: "https://github.com/KonstantinSimeonov/tsfck",
     },
     {
       title: "guacamole-client types",
       description:
         "Typescript library definitions for apache guacamole-client library which is used at Coursera.",
-      links: [
-        {
-          url: "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/45949",
-        },
-      ],
-      priority: 10,
+      url: "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/45949",
     },
     {
       title: "pastes.konsimeonov.lol",
       description:
         "Web app for sharing code with multiple files per paste, private pastes, code highlighting and more. Build with Nextjs, Postgres and AWS.",
-      links: [
-        {
-          url: "https://pastes.konsimeonov.lol",
-        },
-      ],
+      url: "https://pastes.konsimeonov.lol",
     },
   ],
   skills: [

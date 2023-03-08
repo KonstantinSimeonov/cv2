@@ -50,11 +50,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
         ))}
       </Stack>
       <PrintInvis>
-        <Stack
-          tag="section"
-          sx={{ width: `55%` }}
-          className={paper.paper}
-        >
+        <Stack tag="section" sx={{ width: `55%` }} className={paper.paper}>
           <h4>{selected.name}</h4>
           <p style={{ overflowWrap: `anywhere` }}>{selected.description}</p>
         </Stack>

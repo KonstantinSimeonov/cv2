@@ -9,7 +9,7 @@ export const Projects: React.FC<{
   projects: readonly {
     title: string
     description: string
-    links: readonly { url: string }[]
+    url: string
   }[]
 }> = ({ projects }) => (
   <Stack direction="row" align="flex-start" className={animation.fadeIn}>
@@ -18,7 +18,7 @@ export const Projects: React.FC<{
         key={project.title}
         target="_blank"
         className={styles.card}
-        href={project.links[0].url}
+        href={project.url}
       >
         <Text tag="h4">
           {project.title} <span>-&gt;</span>

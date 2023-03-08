@@ -35,7 +35,13 @@ export const WorkExperience: React.FC<{
               align="flex-start"
             >
               {job.descriptions.map(d => (
-                <Text tag="li" color="secondary" variant="description" sx={{ flex: 1 }} key={d}>
+                <Text
+                  tag="li"
+                  color="secondary"
+                  variant="description"
+                  sx={{ flex: 1 }}
+                  key={d}
+                >
                   {d}
                 </Text>
               ))}
