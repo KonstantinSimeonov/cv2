@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Inter } from "@next/font/google"
-import classes from "@/styles/Home.module.css"
+import paper from "@/styles/paper.module.css"
 import animation from "@/styles/animation.module.css"
 
 type TextProps = {
@@ -28,7 +28,7 @@ export const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
 }) => {
   const classNames = [
     `text`,
-    variant === `inter` ? inter.className : classes.description,
+    variant === `inter` ? inter.className : paper.paper,
     typed ? animation.typed : ``,
   ]
     .filter(Boolean)

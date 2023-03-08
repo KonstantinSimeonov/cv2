@@ -1,7 +1,7 @@
 import ExportedImage from "next-image-export-optimizer"
 import ImgMap from "@/images"
 import * as React from "react"
-import styles from "@/styles/Home.module.css"
+import paper from "@/styles/paper.module.css"
 import { Stack } from "./Stack"
 import { PrintInvis } from "./PrintInvis"
 import animation from "@/styles/animation.module.css"
@@ -35,7 +35,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           <li key={s.name} onClick={() => setSelected(s)}>
             <Stack
               data-selected={selected.name === s.name}
-              className={`${styles.description} ${classes.card}`}
+              className={`${paper.paper} ${classes.card}`}
               align="center"
             >
               <ExportedImage
@@ -53,7 +53,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
         <Stack
           tag="section"
           sx={{ width: `55%` }}
-          className={styles.description}
+          className={paper.paper}
         >
           <h4>{selected.name}</h4>
           <p style={{ overflowWrap: `anywhere` }}>{selected.description}</p>

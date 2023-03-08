@@ -1,0 +1,14 @@
+.paper {
+  font-size: var(--small-font);
+  font-family: var(--font-mono);
+  width: 100%;
+  z-index: 2;
+
+  color: var(--secondary-color);
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}

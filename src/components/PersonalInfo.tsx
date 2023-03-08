@@ -4,7 +4,7 @@ import ImgMap from "@/images"
 import * as React from "react"
 import { Stack } from "@/components/Stack"
 import { Text } from "@/components/Text"
-import styles from "./personal-info.module.css"
+import classes from "./personal-info.module.css"
 import animation from "@/styles/animation.module.css"
 
 export const PersonalInfo: React.FC<{
@@ -21,12 +21,12 @@ export const PersonalInfo: React.FC<{
   >
     <Stack align="flex-start" gap={0.5}>
       {contacts.map(({ url, text }) => (
-        <Link className={styles.link} key={url} target="_blank" href={url}>
+        <Link className={classes.link} key={url} target="_blank" href={url}>
           <Text>{text}</Text>
         </Link>
       ))}
     </Stack>
-    <Stack className={`${styles.photo}`}>
+    <Stack className={`${classes.photo}`}>
       <ExportedImage
         src={ImgMap.Photo}
         height="150"
