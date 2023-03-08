@@ -3,37 +3,7 @@
   width: 100vw;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: var(--small-font);
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
 
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description {
-  color: #19f9d8;
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
-}
-
-.description p.opaque {
-  background-color: rgba(var(--callout-rgb), 1);
-}
 
 .code {
   font-weight: 700;
@@ -109,6 +79,25 @@ a.card {
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
+}
+
+.description {
+  font-size: var(--small-font);
+  font-family: var(--font-mono);
+  width: 100%;
+  z-index: 2;
+
+  color: var(--secondary-color);
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}
+
+.description .opaque {
+  background-color: rgba(var(--callout-rgb), 1);
 }
 
 /* Enable hover only on non-touch devices */
