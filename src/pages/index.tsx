@@ -107,7 +107,7 @@ export default function Home() {
           <WorkExperience experience={data.workExperience} />
         </Stack>
 
-        <PrintInvis>
+        <PrintInvis link>
           <Stack tag="article" gap={1} align="start">
             <Text typed tag="h2">
               Projects
@@ -116,7 +116,7 @@ export default function Home() {
           </Stack>
         </PrintInvis>
       </Stack>
-      <PrintInvis link={false}>
+      <PrintInvis>
         <Footer />
       </PrintInvis>
     </>

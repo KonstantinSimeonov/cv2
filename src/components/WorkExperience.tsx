@@ -27,7 +27,7 @@ export const WorkExperience: React.FC<{
               {job.from} - {job.to}
             </Text>
           </Stack>
-          <PrintInvis link={false}>
+          <PrintInvis>
             <Stack
               className={animation.fadeIn}
               tag="ul"

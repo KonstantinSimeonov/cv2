@@ -4,7 +4,7 @@ import classes from "./print-invis.module.css"
 
 export const PrintInvis: React.FC<
   React.PropsWithChildren<{ link?: boolean }>
-> = ({ children, link = true }) => (
+> = ({ children, link = false }) => (
   <>
     {React.Children.map(children, c =>
       React.isValidElement(c)

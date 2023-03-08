@@ -49,7 +49,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           </li>
         ))}
       </Stack>
-      <PrintInvis link={false}>
+      <PrintInvis>
         <Stack
           tag="section"
           sx={{ width: `55%` }}
