@@ -1,12 +1,12 @@
-import Link from "next/link";
-import React from "react";
-import styles from "./print-invis.module.css";
+import Link from "next/link"
+import React from "react"
+import styles from "./print-invis.module.css"
 
 export const PrintInvis: React.FC<
   React.PropsWithChildren<{ link?: boolean }>
 > = ({ children, link = true }) => (
   <>
-    {React.Children.map(children, (c) =>
+    {React.Children.map(children, c =>
       React.isValidElement(c)
         ? {
             ...c,
@@ -25,4 +25,4 @@ export const PrintInvis: React.FC<
       </Link>
     ) : null}
   </>
-);
+)

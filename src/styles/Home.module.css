@@ -129,7 +129,8 @@ a.card {
 }
 
 @media not print {
-  .skill:hover .description, .skill[data-selected=true] .description {
+  .skill:hover .description,
+  .skill[data-selected="true"] .description {
     cursor: pointer;
     background: rgba(var(--callout-rgb), 1);
     border: 1px solid rgba(var(--callout-border-rgb), 1);
@@ -148,5 +149,4 @@ a.card {
     width: 100%;
     max-height: auto;
   }
-
 }

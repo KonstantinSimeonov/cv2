@@ -1,6 +1,6 @@
 import styles from "./footer.module.css"
-import { Stack } from "@/components/Stack";
-import Link from "next/link";
+import { Stack } from "@/components/Stack"
+import Link from "next/link"
 import animation from "@/styles/animation.module.css"
 
 export const Footer: React.FC<{ className?: string }> = ({ className }) => (
@@ -12,9 +12,9 @@ export const Footer: React.FC<{ className?: string }> = ({ className }) => (
   >
     <a
       href="#"
-      onClick={(e) => {
-        e.preventDefault();
-        window.print();
+      onClick={e => {
+        e.preventDefault()
+        window.print()
       }}
     >
       Generate PDF
@@ -23,4 +23,4 @@ export const Footer: React.FC<{ className?: string }> = ({ className }) => (
       Built with NextJS
     </Link>
   </Stack>
-);
+)

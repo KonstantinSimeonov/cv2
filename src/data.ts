@@ -258,4 +258,4 @@ export default {
       priority: 3,
     },
   ],
-} as const;
+} as const

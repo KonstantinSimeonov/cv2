@@ -13,7 +13,7 @@ import TS from "./ts.png"
 import Nextjs from "./nextjs.png"
 import AWS from "./aws.png"
 
-const ImgMap  = {
+const ImgMap = {
   Algo,
   Git,
   Haskell,
@@ -26,7 +26,7 @@ const ImgMap  = {
   React,
   TS,
   Nextjs,
-  AWS
+  AWS,
 } satisfies Record<string, StaticImageData>
 
 export default ImgMap

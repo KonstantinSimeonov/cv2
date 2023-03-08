@@ -1,16 +1,16 @@
-import Head from "next/head";
-import styles from "@/styles/Home.module.css";
-import data from "@/data";
-import { Skills } from "@/components/Skills";
-import { Stack } from "@/components/Stack";
-import { WorkExperience } from "@/components/WorkExperience";
-import { Text } from "@/components/Text";
-import { Footer } from "@/components/Footer";
-import { Projects } from "@/components/Projects";
-import { PersonalInfo } from "@/components/PersonalInfo";
-import ImgMap from "@/images";
-import { PrintInvis } from "@/components/PrintInvis";
-import * as React from "react";
+import Head from "next/head"
+import styles from "@/styles/Home.module.css"
+import data from "@/data"
+import { Skills } from "@/components/Skills"
+import { Stack } from "@/components/Stack"
+import { WorkExperience } from "@/components/WorkExperience"
+import { Text } from "@/components/Text"
+import { Footer } from "@/components/Footer"
+import { Projects } from "@/components/Projects"
+import { PersonalInfo } from "@/components/PersonalInfo"
+import ImgMap from "@/images"
+import { PrintInvis } from "@/components/PrintInvis"
+import * as React from "react"
 import animation from "@/styles/animation.module.css"
 
 // TODO: refactor this technological terror
@@ -20,25 +20,25 @@ const useAnimationChain = () =>
       document.querySelectorAll(`.${animation.typed}, .${animation.fadeIn}`)
     ).reduce<Element | undefined>((prev, next) => {
       if (!prev) {
-        next.classList.add(animation.active);
+        next.classList.add(animation.active)
       } else {
         prev.addEventListener(
           `animationend`,
           () => {
-            next.classList.add(animation.active);
-            prev.classList.add(animation.finished);
-            prev.classList.remove(animation.active);
+            next.classList.add(animation.active)
+            prev.classList.add(animation.finished)
+            prev.classList.remove(animation.active)
           },
           { once: true }
-        );
+        )
       }
 
-      return next;
-    }, undefined);
-  }, []);
+      return next
+    }, undefined)
+  }, [])
 
 export default function Home() {
-  useAnimationChain();
+  useAnimationChain()
 
   return (
     <>
@@ -120,5 +120,5 @@ export default function Home() {
         <Footer />
       </PrintInvis>
     </>
-  );
+  )
 }

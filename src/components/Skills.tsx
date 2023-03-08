@@ -1,25 +1,25 @@
-import ExportedImage from "next-image-export-optimizer";
-import ImgMap from "@/images";
-import * as React from "react";
-import styles from "@/styles/Home.module.css";
-import { Stack } from "./Stack";
-import { PrintInvis } from "./PrintInvis";
+import ExportedImage from "next-image-export-optimizer"
+import ImgMap from "@/images"
+import * as React from "react"
+import styles from "@/styles/Home.module.css"
+import { Stack } from "./Stack"
+import { PrintInvis } from "./PrintInvis"
 import animation from "@/styles/animation.module.css"
 
 type SkillsProps = {
   skills: readonly {
-    name: string;
-    description: string;
-    img_url: keyof typeof ImgMap;
-    priority?: number;
-  }[];
-};
+    name: string
+    description: string
+    img_url: keyof typeof ImgMap
+    priority?: number
+  }[]
+}
 
 export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   const sortedSkills = skills
     .slice()
-    .sort(({ priority: a = 1000 }, { priority: b = 1000 }) => a - b);
-  const [selected, setSelected] = React.useState(sortedSkills[0]);
+    .sort(({ priority: a = 1000 }, { priority: b = 1000 }) => a - b)
+  const [selected, setSelected] = React.useState(sortedSkills[0])
 
   return (
     <Stack
@@ -30,7 +30,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
       sx={{ flexWrap: `nowrap` }}
     >
       <Stack className={styles.skills} tag="ol" direction="row" gap={0.5}>
-        {sortedSkills.map((s) => (
+        {sortedSkills.map(s => (
           <li
             className={styles.skill}
             key={s.name}
@@ -60,5 +60,5 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
         </Stack>
       </PrintInvis>
     </Stack>
-  );
-};
+  )
+}
