@@ -11,23 +11,23 @@ import { PersonalInfo } from "@/components/PersonalInfo";
 import ImgMap from "@/images";
 import { PrintInvis } from "@/components/PrintInvis";
 import * as React from "react";
-import tss from "@/components/typewrite.module.css";
+import animation from "@/styles/animation.module.css"
 
 // TODO: refactor this technological terror
 const useAnimationChain = () =>
   React.useEffect(() => {
     Array.from(
-      document.querySelectorAll(`.${tss.typed}, .${tss.fadeIn}`)
+      document.querySelectorAll(`.${animation.typed}, .${animation.fadeIn}`)
     ).reduce<Element | undefined>((prev, next) => {
       if (!prev) {
-        next.classList.add(tss.active);
+        next.classList.add(animation.active);
       } else {
         prev.addEventListener(
           `animationend`,
           () => {
-            next.classList.add(tss.active);
-            prev.classList.add(tss.finished);
-            prev.classList.remove(tss.active);
+            next.classList.add(animation.active);
+            prev.classList.add(animation.finished);
+            prev.classList.remove(animation.active);
           },
           { once: true }
         );

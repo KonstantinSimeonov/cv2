@@ -4,7 +4,7 @@ import * as React from "react";
 import styles from "@/styles/Home.module.css";
 import { Stack } from "./Stack";
 import { PrintInvis } from "./PrintInvis";
-import tss from "./typewrite.module.css"
+import animation from "@/styles/animation.module.css"
 
 type SkillsProps = {
   skills: readonly {
@@ -26,7 +26,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
       justify="stretch"
       align="start"
       direction="row"
-      className={tss.fadeIn}
+      className={animation.fadeIn}
       sx={{ flexWrap: `nowrap` }}
     >
       <Stack className={styles.skills} tag="ol" direction="row" gap={0.5}>

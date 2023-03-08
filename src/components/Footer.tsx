@@ -1,14 +1,14 @@
 import styles from "./footer.module.css"
 import { Stack } from "@/components/Stack";
 import Link from "next/link";
-import tss from "./typewrite.module.css"
+import animation from "@/styles/animation.module.css"
 
 export const Footer: React.FC<{ className?: string }> = ({ className }) => (
   <Stack
     tag="footer"
     direction="row"
     justify="space-evenly"
-    className={`${styles.footer} ${className} ${tss.fadeIn}`}
+    className={`${styles.footer} ${className} ${animation.fadeIn}`}
   >
     <a
       href="#"

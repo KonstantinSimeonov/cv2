@@ -5,7 +5,7 @@ import * as React from "react";
 import { Stack } from "@/components/Stack";
 import { Text } from "@/components/Text";
 import styles from "./personal-info.module.css"
-import tss from "@/components/typewrite.module.css"
+import animation from "@/styles/animation.module.css"
 
 export const PersonalInfo: React.FC<{
   contacts: readonly {
@@ -13,7 +13,7 @@ export const PersonalInfo: React.FC<{
     text: string;
   }[];
 }> = ({ contacts }) => (
-  <Stack className={tss.fadeIn} direction="row" justify="space-between" sx={{ flexWrap: `nowrap` }}>
+  <Stack className={animation.fadeIn} direction="row" justify="space-between" sx={{ flexWrap: `nowrap` }}>
     <Stack align="flex-start" gap={0.5}>
       {contacts.map(({ url, text }) => (
         <Link className={styles.link} key={url} target="_blank" href={url}>

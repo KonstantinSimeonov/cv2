@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Inter } from "@next/font/google";
 import classes from "@/styles/Home.module.css";
-import typewriteStyles from "./typewrite.module.css";
+import animation from "@/styles/animation.module.css"
 
 type TextProps = {
   tag?: keyof React.ReactHTML;
@@ -27,9 +27,9 @@ export const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
   sx,
 }) => {
   const classNames = [
-    typewriteStyles.text,
+    animation.text,
     variant === `inter` ? inter.className : classes.description,
-    typed ? typewriteStyles.typed : ``,
+    typed ? animation.typed : ``,
   ]
     .filter(Boolean)
     .join(` `);

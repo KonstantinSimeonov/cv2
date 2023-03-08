@@ -1,7 +1,7 @@
 import { Stack } from "@/components/Stack";
 import {PrintInvis} from "./PrintInvis";
 import { Text } from "./Text";
-import tss from "./typewrite.module.css"
+import animation from "@/styles/animation.module.css"
 
 export const WorkExperience: React.FC<{
   experience: readonly {
@@ -26,7 +26,7 @@ export const WorkExperience: React.FC<{
             </Text>
           </Stack>
           <PrintInvis link={false}>
-          <Stack className={tss.fadeIn} tag="ul" direction="row" align="flex-start">
+          <Stack className={animation.fadeIn} tag="ul" direction="row" align="flex-start">
             {job.descriptions.map((d) => (
               <Text tag="li" variant="description" sx={{ flex: 1 }} key={d}>
                 {d}
