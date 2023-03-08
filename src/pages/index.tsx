@@ -10,27 +10,35 @@ import { Projects } from "@/components/Projects";
 import { PersonalInfo } from "@/components/PersonalInfo";
 import ImgMap from "@/images";
 import { PrintInvis } from "@/components/PrintInvis";
-import * as React from "react"
-import tss from "@/components/typewrite.module.css"
+import * as React from "react";
+import tss from "@/components/typewrite.module.css";
+
+// TODO: refactor this technological terror
+const useAnimationChain = () =>
+  React.useEffect(() => {
+    Array.from(
+      document.querySelectorAll(`.${tss.typed}, .${tss.fadeIn}`)
+    ).reduce<Element | undefined>((prev, next) => {
+      if (!prev) {
+        next.classList.add(tss.active);
+      } else {
+        prev.addEventListener(
+          `animationend`,
+          () => {
+            next.classList.add(tss.active);
+            prev.classList.add(tss.finished);
+            prev.classList.remove(tss.active);
+          },
+          { once: true }
+        );
+      }
+
+      return next;
+    }, undefined);
+  }, []);
 
 export default function Home() {
-  React.useEffect(() => {
-    Array.from(document.querySelectorAll(`.${tss.typed}, .${tss.fadeIn}`))
-      .reduce<Element | undefined>((prev, next) => {
-        if (!prev) {
-          next.classList.add(tss.active)
-        } else {
-          prev.addEventListener(`animationend`, () => {
-            next.classList.add(tss.active)
-            prev.classList.add(tss.finished)
-            prev.classList.remove(tss.active)
-          }, { once: true })
-        }
-
-        return next
-      }, undefined)
-      
-  })
+  useAnimationChain();
 
   return (
     <>
@@ -80,22 +88,30 @@ export default function Home() {
             <Text typed tag="h1">
               Konstantin Simeonov
             </Text>
-            <Text typed sx={{ color: `#ffb86c` }}>Sofia, Bulgaria</Text>
+            <Text typed sx={{ color: `#ffb86c` }}>
+              Sofia, Bulgaria
+            </Text>
           </Stack>
           <PersonalInfo contacts={data.personalInfo.contacts} />
         </Stack>
         <Stack tag="article" gap={1} align="start">
-          <Text typed tag="h2">Skills</Text>
+          <Text typed tag="h2">
+            Skills
+          </Text>
           <Skills skills={data.skills} />
         </Stack>
         <Stack tag="article" gap={1} align="start">
-          <Text typed tag="h2">Work Experience</Text>
+          <Text typed tag="h2">
+            Work Experience
+          </Text>
           <WorkExperience experience={data.workExperience} />
         </Stack>
 
         <PrintInvis>
           <Stack tag="article" gap={1} align="start">
-            <Text typed tag="h2">Projects</Text>
+            <Text typed tag="h2">
+              Projects
+            </Text>
             <Projects projects={data.projects} />
           </Stack>
         </PrintInvis>

@@ -13,15 +13,15 @@ export const PersonalInfo: React.FC<{
     text: string;
   }[];
 }> = ({ contacts }) => (
-  <Stack direction="row" justify="space-between" sx={{ flexWrap: `nowrap` }}>
+  <Stack className={tss.fadeIn} direction="row" justify="space-between" sx={{ flexWrap: `nowrap` }}>
     <Stack align="flex-start" gap={0.5}>
       {contacts.map(({ url, text }) => (
         <Link className={styles.link} key={url} target="_blank" href={url}>
-          <Text typed>{text}</Text>
+          <Text>{text}</Text>
         </Link>
       ))}
     </Stack>
-    <Stack className={`${styles.photo} ${tss.fadeIn}`}>
+    <Stack className={`${styles.photo}`}>
       <ExportedImage
         src={ImgMap.Photo}
         height="150"
