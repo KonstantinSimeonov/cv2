@@ -9,7 +9,6 @@
     "lint": "next lint",
     "export": "next export",
     "img-opt": "next-image-export-optimizer",
-    "export-all": "yarn build && yarn export && yarn img-opt",
     "prettier": "prettier",
     "format:all": "prettier --write 'src/**/*.{ts,tsx,css}'"
   },
