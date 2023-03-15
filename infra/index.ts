@@ -35,7 +35,7 @@ const setupCert = (domain: string, zoneId: pulumi.Input<string>) => {
 }
 
 const setupBucket = (domain: string) => {
-  const bucket = new aws.s3.Bucket("resume-bucket", {
+  const bucket = new aws.s3.Bucket(`${domain}-bucket`, {
     bucket: domain,
     website: {
       indexDocument: `index.html`,
@@ -77,7 +77,7 @@ const getZoneId = (zoneName: string) => {
 }
 
 const setupDistribution = (domain: string, bucket: aws.s3.Bucket, originAccessIdentity: aws.cloudfront.OriginAccessIdentity) => {
-  const distribution = new aws.cloudfront.Distribution(`resume-distrib`, {
+  const distribution = new aws.cloudfront.Distribution(`${domain}-distrib`, {
     enabled: true,
 
     aliases: [domain],
