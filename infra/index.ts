@@ -1,6 +1,15 @@
 import * as pulumi from "@pulumi/pulumi"
 import * as aws from "@pulumi/aws"
 
+/**
+ * @description
+ * Created a certificate for the provided domain in the provided hosted zone.
+ * The certificate is created in us-east-1, because cloudfront requires it.
+ * The key algorithms is RSA_2048, which is another requirement by cloudfront.
+ * ([see here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html))
+ *
+ * Domain and certificate validations are also created and returned.
+ */
 const setupCert = (domain: string, zoneId: pulumi.Input<string>) => {
   const region = new aws.Provider(`east`, {
     profile: aws.config.profile,
@@ -37,6 +46,12 @@ const setupCert = (domain: string, zoneId: pulumi.Input<string>) => {
   return { region, cert, validationDomain, certValidation }
 }
 
+/**
+ * @description
+ * Create a bucket for the domain, enabling website endpoint,
+ * making the bucket accessible with a policy/access indentity without
+ * making the bucket public.
+ */
 const setupBucket = (domain: string) => {
   const bucket = new aws.s3.Bucket(`${domain}-bucket`, {
     bucket: domain,
@@ -49,7 +64,7 @@ const setupBucket = (domain: string) => {
   const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity(
     `originAccessIdentity`,
     {
-      comment: `setup s3`,
+      comment: `setup s3 bucket which is accessible, but not public`,
     }
   )
 
@@ -73,6 +88,9 @@ const setupBucket = (domain: string) => {
   return { bucket, originAccessIdentity, bucket_policy }
 }
 
+// use a manually created zone because I don't
+// want to deal with providing the name servers to the
+// dns registrars.
 const getZoneId = (zoneName: string) => {
   const zone = aws.route53.getZone({
     name: zoneName,
@@ -82,8 +100,16 @@ const getZoneId = (zoneName: string) => {
   return zone.then(z => z.zoneId)
 }
 
+/**
+ * @description
+ * Created a cloudfront distribution with access to the provided bucket via
+ * access identity and the provided certificate.
+ * Also creates a Route53 A type record for the distribution in the provided zone.
+ */
 const setupDistribution = (
   domain: string,
+  certArn: pulumi.Input<string>,
+  zoneId: pulumi.Input<string>,
   bucket: aws.s3.Bucket,
   originAccessIdentity: aws.cloudfront.OriginAccessIdentity
 ) => {
@@ -146,12 +172,13 @@ const setupDistribution = (
   return { distribution, aRecord }
 }
 
+/** Config file: {@link ./infra/Pulumi.resume.yaml} */
 const stackCfg = new pulumi.Config()
 
 const config = {
-  domain: stackCfg.require(`domain`), // konsimeonov.lol
+  domain: stackCfg.require(`domain`),
   certArn: stackCfg.get(`certArn`),
-  zone: stackCfg.require(`zone`), // konsimeonov.lol
+  zone: stackCfg.require(`zone`),
 }
 
 const { bucket, originAccessIdentity } = setupBucket(config.domain)
@@ -161,6 +188,8 @@ const certArn =
   setupCert(config.domain, zoneId).certValidation.certificateArn
 const { distribution } = setupDistribution(
   config.domain,
+  certArn,
+  zoneId,
   bucket,
   originAccessIdentity
 )
