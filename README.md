@@ -7,7 +7,7 @@ npm i
 npm run dev
 ```
 
-Deployed (using AWS) at https://konsimeonov.lol].
+Deployed (using AWS) at https://konsimeonov.lol
 
 ### Infra
 Set up via [pulumi infrastructure-as-code](https://www.pulumi.com/) in the [infra/](./infra) directory. Includes the following components:
