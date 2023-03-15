@@ -1,0 +1,5 @@
+name: resume
+description: AWS infra for static resume website
+runtime: nodejs
+main: infra/
+stackConfigDir: infra/
