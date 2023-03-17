@@ -83,10 +83,10 @@ export default {
   ],
   projects: [
     {
-      title: "AoC 2022",
+      title: "Advent of Code",
       description:
-        "How I fell in love with Rust while blasting some algorithms (Advent of Code 2022 solutions).",
-      url: "https://github.com/KonstantinSimeonov/aoc2o22",
+        "Using fun languages like haskell, rust and plsql to solve Advent of Code algorithmic problems",
+      url: "https://github.com/KonstantinSimeonov/aoc-megarepo",
     },
     {
       title: "tsx-ctrl-statements",
