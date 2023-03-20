@@ -95,10 +95,10 @@ export default {
       url: "https://github.com/KonstantinSimeonov/tsx-control-statements",
     },
     {
-      title: "tsfck",
+      title: "aot",
       description:
         "Pure compile-time implementation of various fun programs (fibs, primes, string ops) using typescript type language.",
-      url: "https://github.com/KonstantinSimeonov/tsfck",
+      url: "https://github.com/KonstantinSimeonov/aot",
     },
     {
       title: "guacamole-client types",
