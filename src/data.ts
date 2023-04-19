@@ -8,6 +8,10 @@ export default {
         text: "github",
       },
       {
+        url: "https://blog.konsimeonov.lol",
+        text: "blog",
+      },
+      {
         url: "https://www.hackerrank.com/kon_trombon",
         text: "hackerrank",
       },
@@ -112,6 +116,11 @@ export default {
         "Web app for sharing code with multiple files per paste, private pastes, code highlighting and more. Build with Nextjs, Postgres and AWS.",
       url: "https://pastes.konsimeonov.lol",
     },
+    {
+      title: "blog.konsimeonov.lol",
+      description: "A blog where I get to share esoteric, non-trivial or otherwise curious programming insights. Built with Nextjs and AWS.",
+      url: "https://blog.konsimeonov.lol"
+    }
   ],
   skills: [
     {
