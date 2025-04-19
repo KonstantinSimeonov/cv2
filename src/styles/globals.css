@@ -56,6 +56,13 @@ a {
   font-family: var(--font-mono);
 }
 
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    filter: brightness(0.85);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
