@@ -16,10 +16,6 @@ export default {
         text: "hackerrank",
       },
       {
-        url: "tel:+359 885 032 502",
-        text: "+359 885 032 502",
-      },
-      {
         url: "mailto:kon.simeonov@protonmail.com",
         text: "kon.simeonov@protonmail.com",
       },
@@ -31,6 +27,7 @@ export default {
       to: "Jan 2017",
       jobTitle: "Technical Trainer",
       location: "Telerik Academy",
+      companySiteUrl: "https://www.telerikacademy.com/",
       descriptions: [
         "Delivered lectures that helped more than 2000 students on their journey from beginner to juniour in web development with C#, HTML, CSS and JavaScript",
         "Created exam programming problems for topics like algorithms, javascript DOM and programming fundamentals, organized exams and lectures",
@@ -40,8 +37,9 @@ export default {
     {
       from: "Apr 2017",
       to: "Jul 2019",
-      jobTitle: "Mid-level JavaScript Developer",
+      jobTitle: "JavaScript Dev",
       location: "Chaosgroup",
+      companySiteUrl: "https://www.chaos.com/",
       descriptions: [
         "Worked on V-Ray for Sketchup/Rhino/Revit, which provides a cross-platform UI for interacting with V-Ray",
         "Built dynamic user interfaces using Electron, React, Typescript, Mobx and Redux",
@@ -51,8 +49,9 @@ export default {
     {
       from: "Jul 2019",
       to: "Jan 2020",
-      jobTitle: "Mid-level Scala Developer",
+      jobTitle: "Scala Contractor",
       location: "Pontica Solutions Ltd",
+      companySiteUrl: "https://ponticasolutions.com/",
       descriptions: [
         "Scheduled emails leveraging Akka and Apache Kafka",
         "Implemented email statistics using Apache Spark and Apache Kafka",
@@ -63,8 +62,9 @@ export default {
     {
       from: "Jan 2020",
       to: "Mar 2022",
-      jobTitle: "Senior Software Developer",
+      jobTitle: "Senior Software Dev",
       location: "Coursera",
+      companySiteUrl: "https://www.coursera.org/",
       descriptions: [
         "Developed rhyme.com, an in-browser interactive studying VM environment, complete with audio/video calls and video instructions",
         "Implemented video transcriptions with AWS Transcribe",
@@ -75,8 +75,9 @@ export default {
     {
       from: "Mar 2022",
       to: "Nov 2022",
-      jobTitle: "Senior Full-Stack Developer",
+      jobTitle: "Senior Full-Stack Dev",
       location: "Synthesis",
+      companySiteUrl: "https://www.synthesis.com/teams",
       descriptions: [
         "Worked on portal.synthesis.is with nextjs, typeorm, mysql, zod and react-query",
         "Optimized typeorm/mysql queries, modified indexes and constraints, migrated table schemas to improve performance and maintainability",

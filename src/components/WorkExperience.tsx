@@ -9,6 +9,7 @@ export const WorkExperience: React.FC<{
     to: string
     jobTitle: string
     location: string
+    companySiteUrl: string
     descriptions: readonly string[]
   }[]
 }> = ({ experience }) => (
@@ -17,12 +18,14 @@ export const WorkExperience: React.FC<{
       .map(job => (
         <Stack key={job.location} gap={0.5}>
           <Row gap={1} justify="space-between">
-            <Row gap={1}>
+            <Row gap={0.5}>
             <Text sx={{ fontStyle: `italic` }} typed tag="h3">
-              {job.location}
+              <a style={{ color: `var(--primary-color)` }} target="_blank" rel="noreferrer" href={job.companySiteUrl}>
+                {job.location}
+              </a>
             </Text>
-            <Text sx={{ fontStyle: `italic` }} color="secondary" typed tag="h3">
-              {job.jobTitle}
+            <Text sx={{ fontStyle: `italic` }} typed tag="h4">
+              ({job.jobTitle})
             </Text>
 </Row>
             <Text typed tag="time">
