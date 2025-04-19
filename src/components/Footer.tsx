@@ -1,6 +1,5 @@
 import { Stack } from "@/components/Stack"
 import Link from "next/link"
-import animation from "@/styles/animation.module.css"
 import classes from "./footer.module.css"
 
 export const Footer: React.FC<{ className?: string }> = ({ className }) => (
@@ -8,7 +7,7 @@ export const Footer: React.FC<{ className?: string }> = ({ className }) => (
     tag="footer"
     direction="row"
     justify="space-evenly"
-    className={`${classes.footer} ${className} ${animation.fadeIn}`}
+    className={`${classes.footer} ${className}`}
   >
     <a
       href="#"

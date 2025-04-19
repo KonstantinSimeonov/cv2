@@ -27,8 +27,8 @@ export default {
   },
   workExperience: [
     {
-      from: "December 2015",
-      to: "January 2017",
+      from: "Dec 2015",
+      to: "Jan 2017",
       jobTitle: "Technical Trainer",
       location: "Telerik Academy",
       descriptions: [
@@ -38,8 +38,8 @@ export default {
       ],
     },
     {
-      from: "April 2017",
-      to: "July 2019",
+      from: "Apr 2017",
+      to: "Jul 2019",
       jobTitle: "Mid-level JavaScript Developer",
       location: "Chaosgroup",
       descriptions: [
@@ -49,8 +49,8 @@ export default {
       ],
     },
     {
-      from: "July 2019",
-      to: "January 2020",
+      from: "Jul 2019",
+      to: "Jan 2020",
       jobTitle: "Mid-level Scala Developer",
       location: "Pontica Solutions Ltd",
       descriptions: [
@@ -61,8 +61,8 @@ export default {
       ],
     },
     {
-      from: "January 2020",
-      to: "March 2022",
+      from: "Jan 2020",
+      to: "Mar 2022",
       jobTitle: "Senior Software Developer",
       location: "Coursera",
       descriptions: [
@@ -73,8 +73,8 @@ export default {
       ],
     },
     {
-      from: "March 2022",
-      to: "November 2022",
+      from: "Mar 2022",
+      to: "Nov 2022",
       jobTitle: "Senior Full-Stack Developer",
       location: "Synthesis",
       descriptions: [

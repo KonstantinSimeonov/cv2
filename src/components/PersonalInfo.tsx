@@ -5,7 +5,6 @@ import * as React from "react"
 import { Stack } from "@/components/Stack"
 import { Text } from "@/components/Text"
 import classes from "./personal-info.module.css"
-import animation from "@/styles/animation.module.css"
 
 export const PersonalInfo: React.FC<{
   contacts: readonly {
@@ -14,7 +13,6 @@ export const PersonalInfo: React.FC<{
   }[]
 }> = ({ contacts }) => (
   <Stack
-    className={animation.fadeIn}
     direction="row"
     justify="space-between"
     sx={{ flexWrap: `nowrap` }}

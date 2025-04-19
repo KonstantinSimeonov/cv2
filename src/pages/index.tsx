@@ -9,37 +9,10 @@ import { Projects } from "@/components/Projects"
 import { PersonalInfo } from "@/components/PersonalInfo"
 import ImgMap from "@/images"
 import { PrintInvis } from "@/components/PrintInvis"
-import animation from "@/styles/animation.module.css"
 import classes from "@/styles/home.module.css"
 import data from "@/data"
 
-// TODO: refactor this technological terror
-const useAnimationChain = () =>
-  React.useEffect(() => {
-    Array.from(
-      document.querySelectorAll(`.${animation.typed}, .${animation.fadeIn}`)
-    ).reduce<Element | undefined>((prev, next) => {
-      if (!prev) {
-        next.classList.add(animation.active)
-      } else {
-        prev.addEventListener(
-          `animationend`,
-          () => {
-            next.classList.add(animation.active)
-            prev.classList.add(animation.finished)
-            prev.classList.remove(animation.active)
-          },
-          { once: true }
-        )
-      }
-
-      return next
-    }, undefined)
-  }, [])
-
 export default function Home() {
-  useAnimationChain()
-
   return (
     <>
       <Head>

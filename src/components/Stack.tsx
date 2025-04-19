@@ -1,24 +1,8 @@
 import React from "react"
 import classes from "./stack.module.css"
+import {FlexProps} from "./types"
 
-type StackProps = {
-  direction?: React.CSSProperties[`flexDirection`]
-  gap?: 0 | 0.5 | 1 | 2 | 3
-  justify?: React.CSSProperties[`justifyContent`]
-  align?: React.CSSProperties[`alignItems`]
-  tag?: keyof React.ReactHTML
-  className?: string
-  sx?: Omit<
-    React.CSSProperties,
-    | keyof StackProps
-    | `display`
-    | `flexDirection`
-    | `justifyContent`
-    | `alignItems`
-  >
-}
-
-export const Stack: React.FC<React.PropsWithChildren<StackProps>> = ({
+export const Stack: React.FC<FlexProps> = ({
   children,
   tag: Tag = `div`,
   direction = `column`,

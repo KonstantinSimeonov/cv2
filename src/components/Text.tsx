@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Inter } from "@next/font/google"
 import paper from "@/styles/paper.module.css"
-import animation from "@/styles/animation.module.css"
 
 type TextProps = {
   tag?: keyof React.ReactHTML
@@ -23,7 +22,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
   children,
   tag: Tag = `p`,
-  typed = false,
   variant = `inter`,
   color = `primary`,
   sx,
@@ -31,7 +29,6 @@ export const Text: React.FC<React.PropsWithChildren<TextProps>> = ({
   const classNames = [
     `text`,
     variant === `inter` ? inter.className : paper.paper,
-    typed ? animation.typed : ``,
   ]
     .filter(Boolean)
     .join(` `)

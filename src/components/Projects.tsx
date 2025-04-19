@@ -2,7 +2,6 @@ import Link from "next/link"
 import { Stack } from "@/components/Stack"
 import { Text } from "@/components/Text"
 import * as React from "react"
-import animation from "@/styles/animation.module.css"
 import styles from "./projects.module.css"
 
 export const Projects: React.FC<{
@@ -12,7 +11,7 @@ export const Projects: React.FC<{
     url: string
   }[]
 }> = ({ projects }) => (
-  <Stack direction="row" align="flex-start" className={animation.fadeIn}>
+  <Stack direction="row" align="flex-start">
     {projects.map(project => (
       <Link
         key={project.title}
