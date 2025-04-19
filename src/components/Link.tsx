@@ -7,8 +7,8 @@ export const ExternalLink: React.FC<React.PropsWithChildren<{
   href: string
   title?: string
 }>> = (props) => (
-  <NextLink title={props.title} href={props.href} className={styles.link}>
-    <Text variant="inter" sx={{ fontWeight: "bold" }}>
+  <NextLink href={props.href} className={styles.link}>
+    <Text title={props.title} variant="inter" sx={{ fontWeight: "bold" }}>
     {props.children} <span>-&gt;</span>
 </Text>
   </NextLink>

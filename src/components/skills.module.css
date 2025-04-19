@@ -9,7 +9,7 @@
     cursor: pointer;
     background: rgba(var(--callout-rgb), 1);
     border: 1px solid rgba(var(--callout-border-rgb), 1);
-    text-decoration: underline;
+    font-weight: bold;
   }
 }
 
