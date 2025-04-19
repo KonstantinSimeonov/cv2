@@ -62,7 +62,9 @@ export default function Home() {
               Konstantin Simeonov
             </Text>
             <Text typed variant="inter">
-              Sofia, Bulgaria
+              <a style={{ color: `var(--primary-color)` }} href="mailto:kon.simeonov@protonmail.com">
+                kon.simeonov@protonmail.com
+</a>
             </Text>
           </Stack>
           <PersonalInfo contacts={data.personalInfo.contacts} />

@@ -1,4 +1,4 @@
-a.card {
+a.card, a.link {
   text-decoration: none;
   color: var(--primary-color);
   font-family: inherit;
@@ -13,7 +13,11 @@ a.card {
   max-width: 40ch;
 }
 
-.card span {
+.link {
+  text-transform: uppercase;
+}
+
+.link span, .card span {
   display: inline-block;
   transition: transform 200ms;
 }
@@ -37,7 +41,7 @@ a.card {
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
 
-  .card:hover span {
+  .link:hover span, .card:hover span {
     transform: translateX(4px);
   }
 }

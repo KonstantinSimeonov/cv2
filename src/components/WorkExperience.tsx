@@ -2,6 +2,7 @@ import { Stack } from "@/components/Stack"
 import { PrintInvis } from "./PrintInvis"
 import { Text } from "./Text"
 import {Row} from "./Row"
+import {ExternalLink} from "./Link"
 
 export const WorkExperience: React.FC<{
   experience: readonly {
@@ -19,15 +20,13 @@ export const WorkExperience: React.FC<{
         <Stack key={job.location} gap={0.5}>
           <Row gap={1} justify="space-between">
             <Row gap={0.5}>
-            <Text sx={{ fontStyle: `italic` }} typed tag="h3">
-              <a style={{ color: `var(--primary-color)` }} target="_blank" rel="noreferrer" href={job.companySiteUrl}>
-                {job.location}
-              </a>
+<Text sx={{ textTransform: "uppercase" }} typed>
+              {job.jobTitle}
             </Text>
-            <Text sx={{ fontStyle: `italic` }} typed tag="h4">
-              ({job.jobTitle})
-            </Text>
-</Row>
+            <Text>at</Text>
+            <ExternalLink title="Visit company website" href={job.companySiteUrl}>{job.location}</ExternalLink>
+            
+          </Row>
             <Text typed tag="time">
               {job.from} - {job.to}
             </Text>

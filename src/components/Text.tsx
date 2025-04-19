@@ -15,6 +15,7 @@ type TextProps = {
       >
   sx?: React.CSSProperties
   color?: `primary` | `secondary`
+  title?: string
 }
 
 const inter = Inter({ subsets: ["latin"] })
