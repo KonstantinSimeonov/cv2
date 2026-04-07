@@ -1,8 +1,7 @@
 import { Stack } from "@/components/Stack"
-import { PrintInvis } from "./PrintInvis"
 import { Text } from "./Text"
-import {Row} from "./Row"
-import {ExternalLink} from "./Link"
+import { Row } from "./Row"
+import { ExternalLink } from "./Link"
 
 export const WorkExperience: React.FC<{
   experience: readonly {
@@ -20,23 +19,21 @@ export const WorkExperience: React.FC<{
         <Stack key={job.location} gap={0.5}>
           <Row gap={1} justify="space-between">
             <Row gap={0.5}>
-<Text sx={{ textTransform: "uppercase" }} typed>
-              {job.jobTitle}
-            </Text>
-            <Text>at</Text>
-            <ExternalLink title="Visit company website" href={job.companySiteUrl}>{job.location}</ExternalLink>
-            
+              <Text sx={{ textTransform: "uppercase" }} typed>
+                {job.jobTitle}
+              </Text>
+              <ExternalLink
+                title="Visit company website"
+                href={job.companySiteUrl}
+              >
+                {job.location}
+              </ExternalLink>
+              <Text typed tag="time">
+                ({job.from} - {job.to})
+              </Text>
+            </Row>
           </Row>
-            <Text typed tag="time">
-              {job.from} - {job.to}
-            </Text>
-          </Row>
-          <PrintInvis>
-            <Stack
-              tag="ul"
-              direction="row"
-              align="flex-start"
-            >
+            <Stack tag="ul" direction="row" align="flex-start">
               {job.descriptions.map(d => (
                 <Text
                   tag="li"
@@ -49,7 +46,6 @@ export const WorkExperience: React.FC<{
                 </Text>
               ))}
             </Stack>
-          </PrintInvis>
         </Stack>
       ))
       .reverse()}

@@ -32,7 +32,7 @@ export const data = {
     {
       from: "Apr 2017",
       to: "Jul 2019",
-      jobTitle: "JavaScript Dev",
+      jobTitle: "JS Dev",
       location: "Chaosgroup",
       companySiteUrl: "https://www.chaos.com/",
       descriptions: [
@@ -179,13 +179,6 @@ export const data = {
         "10 years of experience building production UIs with React across five companies. Performance-focused - memoization, virtualization for large interactive tables/lists, code splitting with dynamic imports, bundle analysis and profiling re-renders with React DevTools and CPU/network with browser DevTools. Use Apollo GraphQL hooks at Loancrate and React Query at Synthesis, including optimistic updates with both. Testing with Chromatic visual snapshots and Playwright e2e. At Coursera I worked on an in-browser VM environment with audio/video calls.",
       img_url: "React",
       priority: 8,
-    },
-    {
-      name: "Mentoring",
-      description:
-        "Mentored 2000+ students at Telerik Academy and continued mentoring junior and mid-level engineers at Coursera, Synthesis and Loancrate. I also mentor developers outside of work - check out https://latrovaliev.dev/, he's my best student!",
-      img_url: "Mentor",
-      priority: 9,
     },
   ],
 } as const

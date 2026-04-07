@@ -13,12 +13,6 @@
   }
 }
 
-.skills {
-  width: 35%;
-  max-height: 30rem;
-  overflow: auto;
-}
-
 @media print {
   .skills {
     width: 100%;

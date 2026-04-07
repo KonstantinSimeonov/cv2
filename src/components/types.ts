@@ -10,7 +10,6 @@ export type FlexProps = React.PropsWithChildren<{
   sx?: Omit<
     React.CSSProperties,
     | keyof FlexProps
-    | `display`
     | `flexDirection`
     | `justifyContent`
     | `alignItems`
