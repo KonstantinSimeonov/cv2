@@ -47,9 +47,9 @@ export default {
       location: "Pontica Solutions Ltd",
       companySiteUrl: "https://ponticasolutions.com/",
       descriptions: [
+        "Evaluated and chose the Scala/Akka/Redis/Kafka stack for an email scheduling system, authoring the design doc covering architecture and tradeoffs",
         "Scheduled emails leveraging Akka and Apache Kafka and implemented email statistics using Apache Spark and Apache Kafka",
         "Put together a CI/CD pipeline for the new email scheduling system using GitLab, SBT, Docker, Linux and Bash",
-        "Ensured code correctness by combining functional programming and testing with ScalaTest and ScalaCheck",
         "Used AWS SQS, SNS and S3 to implement customer facing APIs for eventing and data export",
       ],
     },
@@ -62,6 +62,7 @@ export default {
       descriptions: [
         "Developed rhyme.com, an in-browser interactive studying VM environment with audio/video calls and video instructions, using React, Typescript, AWS, PostgreSQL and Golang",
         "Implemented video transcription pipeline with AWS Transcribe and S3, in-browser video editing with FFMPEG, notification center and input capture/replay",
+        "Designed and documented the approach for video/subtitle CRUD and led an app-wide accessibility implementation under a tight deadline",
         "Introduced property-based testing, published typescript definitions for untyped libraries, set up code coverage and automated dependency updates",
       ],
     },
@@ -89,6 +90,9 @@ export default {
         "Migrated CI from CircleCI to Buildkite, cutting build times from 60 min to ~13 min while halving costs - implemented Docker layer caching, Turborepo remote cache, parallel deployments, short-lived credentials, granular token scoping and job timeouts",
         "Built Terraform-managed ephemeral review environments with AWS CloudMap service discovery, auto-rollback of failed migrations, daily cleanup automation and cost-optimized resource scaling",
         "Leveraged AI to automate product changes to tenant configurations and extract/validate document data on mortgage applications",
+        "Built multi-tenant onboarding and authentication with WorkOS - SSO integration with Azure AD/Google Workspace, tenant environment provisioning and switching, user provisioning and onboarding flows",
+        "On-call rotation with PagerDuty - debug and resolve production issues using Datadog, Sentry, BullMQ Arena, Conduktor for Kafka and readonly access to Redis and PostgreSQL via CLI",
+        "Authored RFCs and design docs for architectural decisions including cross-org config sync, AWS cost optimization and testing practices - covering risk assessment, rollout plans and security/cost tradeoffs",
       ],
     },
   ],
