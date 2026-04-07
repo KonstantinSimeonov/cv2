@@ -4,8 +4,16 @@
   border-top: 1px dashed var(--primary-color);
 }
 
+.siteLink {
+  display: none;
+}
+
 @media print {
-  .footer {
+  .printLink {
     display: none;
+  }
+
+  .siteLink {
+    display: initial;
   }
 }
