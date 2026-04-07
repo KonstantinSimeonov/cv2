@@ -19,7 +19,7 @@ export const Footer: React.FC<{ className?: string }> = ({ className }) => (
       Generate PDF
     </a>
     <Link target="_blank" href="https://github.com/KonstantinSimeonov/cv2">
-      Built with NextJS
+      Built with NextJS/AWS/Pulumi
     </Link>
   </Stack>
 )
