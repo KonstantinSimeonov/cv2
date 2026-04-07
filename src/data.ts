@@ -126,7 +126,7 @@ export default {
     {
       name: "AWS",
       description:
-        "Built and managed infrastructure across ECS, EC2, RDS, S3, SQS, SNS, CloudMap and IAM. At Loancrate, I use Terraform to provision ephemeral review environments, manage ECS deployments with service discovery and handle networking with VPCs and security groups. Previously used AWS Transcribe for video subtitles at Coursera and SQS/SNS for event-driven APIs at Pontica.",
+        "Built and managed infrastructure across ECS, EC2, RDS, S3, SQS, SNS, CloudMap and IAM. At Loancrate, I use Terraform to provision ephemeral review environments, manage ECS deployments with service discovery and handle networking with VPCs and security groups. Also run the Buildkite CI stack on AWS using ASGs, custom AMIs, IAM, CloudFormation and CloudWatch. Previously used AWS Transcribe for video subtitles at Coursera and SQS/SNS for event-driven APIs at Pontica.",
       img_url: "AWS",
       priority: 1,
     },
