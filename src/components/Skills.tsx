@@ -19,26 +19,24 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     .slice()
     .sort(({ priority: a = 1000 }, { priority: b = 1000 }) => a - b)
   return (
-    <Stack justify="stretch" align="start" direction="row">
-      <Stack className={classes.skills} tag="ol" direction="row" gap={0.5}>
-        {sortedSkills.map(s => (
-          <li key={s.name} style={{ width: "40%" }}>
-            <Stack tag="section" className={paper.paper}>
-              <Stack tag="h4" direction="row" justify="space-between">
-                {s.name}{" "}
-                <ExportedImage
-                  src={ImgMap[s.img_url]}
-                  height="25"
-                  width="25"
-                  alt="typescript"
-                  style={{ display: "inline-block" }}
-                />
-              </Stack>
-              <p>{s.description}</p>
+    <ol className={classes.skills}>
+      {sortedSkills.map(s => (
+        <li key={s.name}>
+          <Stack tag="section" className={paper.paper}>
+            <Stack tag="h4" direction="row" justify="space-between">
+              {s.name}{" "}
+              <ExportedImage
+                src={ImgMap[s.img_url]}
+                height="25"
+                width="25"
+                alt="typescript"
+                style={{ display: "inline-block" }}
+              />
             </Stack>
-          </li>
-        ))}
-      </Stack>
-    </Stack>
+            <p>{s.description}</p>
+          </Stack>
+        </li>
+      ))}
+    </ol>
   )
 }

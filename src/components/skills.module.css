@@ -1,21 +1,21 @@
-.skills .card {
-  padding: 0.5rem;
-  width: 12ch;
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  list-style: none;
+  padding: 0;
 }
 
-@media not print {
-  .card:hover,
-  .card[data-selected="true"] {
-    cursor: pointer;
-    background: rgba(var(--callout-rgb), 1);
-    border: 1px solid rgba(var(--callout-border-rgb), 1);
-    font-weight: bold;
+@media (max-width: 768px) {
+  .skills {
+    grid-template-columns: 1fr;
   }
 }
 
 @media print {
   .skills {
-    width: 100%;
+    grid-template-columns: 1fr 1fr;
     max-height: auto;
   }
 }
