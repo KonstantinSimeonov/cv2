@@ -133,7 +133,7 @@ export default {
     {
       name: "NodeJS",
       description:
-        "My primary backend platform. At Loancrate I work on a Node/GraphQL/Prisma API powering a multi-tenant mortgage system - building features like cross-org config sync, internal job scheduling, Kafka consumers and webhook event publishing. Previously built backend services at Coursera (with Golang) and Synthesis (with NextJS API routes).",
+        "My primary backend platform. At Loancrate I work on a Node/GraphQL/Prisma API powering a multi-tenant mortgage system - cross-org config sync, internal job scheduling, Kafka consumers and webhook event publishing. Experienced with Node performance debugging - profiling event loop blocks in resolvers and jobs, reducing heap usage, improving startup times by untangling import graphs, leveraging native dependencies and instrumenting services with Sentry and Datadog.",
       img_url: "Node",
       priority: 2,
     },
@@ -166,18 +166,25 @@ export default {
       priority: 6,
     },
     {
+      name: "Terraform/IaC",
+      description:
+        "Authored custom Terraform modules at Loancrate to manage Buildkite CI infrastructure on top of the AWS Elastic Stack - clusters, pipelines, S3 buckets for logs/cache/artifacts, secrets management, CI feature flags and a release freeze implementation. Also use Terraform for ephemeral review environments, ECS service definitions and VPC networking.",
+      img_url: "AWS",
+      priority: 7,
+    },
+    {
       name: "React",
       description:
         "9 years of experience building production UIs with React across five companies. Comfortable with hooks, context, performance optimization (memoization, stable references, code splitting) and testing. At Loancrate I work on a large multi-tenant SPA with GraphQL; at Coursera I built an in-browser VM environment with audio/video calls.",
       img_url: "React",
-      priority: 7,
+      priority: 8,
     },
     {
       name: "Mentoring",
       description:
         "Mentored 2000+ students at Telerik Academy and continued mentoring junior and mid-level engineers at Coursera, Synthesis and Loancrate. I also mentor developers outside of work - check out https://latrovaliev.dev/, he's my best student!",
       img_url: "Mentor",
-      priority: 8,
+      priority: 9,
     },
   ],
 } as const
