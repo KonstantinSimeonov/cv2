@@ -12,6 +12,7 @@ import React from "./react.png"
 import TS from "./ts.png"
 import Nextjs from "./nextjs.png"
 import AWS from "./aws.png"
+import Terraform from "./terraform.png";
 
 const ImgMap = {
   Algo,
@@ -27,6 +28,7 @@ const ImgMap = {
   TS,
   Nextjs,
   AWS,
+  Terraform
 } satisfies Record<string, StaticImageData>
 
 export default ImgMap

@@ -166,7 +166,7 @@ export const data = {
       name: "Terraform/IaC",
       description:
         "Authored custom Terraform modules to manage Buildkite CI infrastructure on top of the AWS Elastic Stack - clusters, pipelines, S3 buckets for logs/cache/artifacts, secrets management, CI feature flags and a release freeze implementation.",
-      img_url: "AWS",
+      img_url: "Terraform",
       priority: 4,
     },
     {
