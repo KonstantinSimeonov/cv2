@@ -68,13 +68,21 @@ export default function Home() {
             <Text typed tag="h1">
               Konstantin Simeonov
             </Text>
-            <Text typed variant="inter">
-              <a style={{ color: `var(--primary-color)` }} href="mailto:kon.simeonov@protonmail.com">
-                kon.simeonov@protonmail.com
-</a>
-            </Text>
+            <Stack direction="row" gap={1} align="center" sx={{ flexWrap: `wrap` }}>
+              <Text typed variant="inter">
+                <a style={{ color: `var(--primary-color)` }} href="mailto:kon.simeonov@protonmail.com">
+                  kon.simeonov@protonmail.com
+                </a>
+              </Text>
+              {data.personalInfo.contacts.map(({ url, text }) => (
+                <Text key={url} typed variant="inter">
+                  <a style={{ color: `var(--primary-color)` }} href={url} target="_blank">
+                    {text}
+                  </a>
+                </Text>
+              ))}
+            </Stack>
           </Stack>
-          <PersonalInfo contacts={data.personalInfo.contacts} />
         </Stack>
         <Stack tag="article" gap={1} align="start">
           <Text typed tag="h2">

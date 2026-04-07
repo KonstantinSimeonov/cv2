@@ -12,10 +12,6 @@ export const data = {
         url: "https://blog.konsimeonov.lol",
         text: "blog",
       },
-      {
-        url: "https://www.hackerrank.com/kon_trombon",
-        text: "hackerrank",
-      },
     ],
   },
   workExperience: [
