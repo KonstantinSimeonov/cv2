@@ -123,56 +123,56 @@ export const data = {
     {
       name: "AWS",
       description:
-        "Built and managed infrastructure across ECS, EC2, RDS, S3, SQS, SNS, CloudMap and IAM. At Loancrate, I use Terraform to provision ephemeral review environments, manage ECS deployments with service discovery and handle networking with VPCs and security groups. Also run the Buildkite CI stack on AWS using ASGs, custom AMIs, IAM, CloudFormation and CloudWatch. Previously used AWS Transcribe for video subtitles at Coursera and SQS/SNS for event-driven APIs at Pontica.",
+        "Built/managed infrastructure across ECS, EC2, RDS, S3, SQS, SNS, CloudMap, IAM, ASGs, CloudFormation and CloudWatch. Handled networking with VPCs and security groups. Used AWS Transcribe for subtitles at Coursera and SQS/SNS for event-driven APIs at Pontica.",
       img_url: "AWS",
       priority: 1,
     },
     {
       name: "NodeJS",
       description:
-        "My primary backend platform. At Loancrate I work on a Node/GraphQL/Prisma API powering a multi-tenant mortgage system - cross-org config sync, internal job scheduling, Kafka consumers and webhook event publishing. Experienced with Node performance debugging - profiling event loop blocks in resolvers and jobs, reducing heap usage, improving startup times by untangling import graphs, leveraging native dependencies and instrumenting services with Sentry and Datadog.",
+        "My primary backend platform for building GraphQL/Prisma APIs and background job systems. Experienced with Node performance debugging - profiling event loop blocks in resolvers and jobs, reducing heap usage, improving startup time by untangling import graphs and instrumenting services with Sentry and Datadog.",
       img_url: "Node",
       priority: 2,
     },
     {
       name: "Databases",
       description:
-        "Daily work with PostgreSQL through Prisma at Loancrate - schema design, migrations, seed infrastructure, query optimization and multi-tenant data management across thousands of configuration records. Use Redis for caching and job queues (BullMQ). At Synthesis, consolidated separate per-user-type tables into a single table with a discriminator column and JSON profile field, eliminating expensive multi-table joins and significantly speeding up search queries across a read-heavy app. At Coursera, designed PostgreSQL schemas for indexing S3-hosted videos and subtitle translations.",
+        "Daily work with PostgreSQL (Prisma) at Loancrate - schema design, migrations, seed infrastructure, query optimization and multi-tenant data management. Used Redis for caching and job queues (BullMQ). At Synthesis, consolidated separate per-user-type tables into a single table with a discriminator column and JSON profile field, eliminating expensive multi-table joins and significantly speeding up search queries across a read-heavy app. At Coursera, designed PostgreSQL schemas for indexing S3-hosted videos and subtitle translations.",
       img_url: "SQL",
       priority: 3,
     },
     {
       name: "Typescript",
       description:
-        "My primary language for the last 10 years across frontend, backend, infrastructure tooling and CI pipelines. I use advanced type-level features regularly - branded types, conditional types, template literals, mapped types - and have published a TypeScript compiler plugin (tsx-ctrl-statements) with 4K weekly npm downloads. Experienced with scaling TypeScript builds in large monorepos - simplifying complex types to reduce tsc overhead, tuning module structure and heap size to cut build times by a third or more, and migrating monorepo packages to ESM.",
+        "My primary language for the last 10 years across frontend, backend, infrastructure tooling and CI pipelines. Experienced with scaling TypeScript builds in large monorepos - simplifying complex types to reduce tsc overhead, tuning module structure and heap size to cut build times. Fluent in advanced type-level features regularly - branded types, conditional types, template literals, mapped types. Author of a TypeScript compiler plugin (tsx-ctrl-statements) with 4K weekly npm downloads. ",
       img_url: "TS",
-      priority: 4,
+      priority: 7,
     },
     {
       name: "Algorithms",
       description:
-        "Applied daily in production work - BFS/DFS for CI job dependency skipping, topological sorting for multi-table config sync with foreign key dependencies, bin-packing for test splitting with historical timing data (dropping extreme outliers for accuracy), task queues for parallel workloads. Work with ASTs for a validation rule syntax (JSON-encoded boolean expressions) - rendering to human-readable text, serializing for similarity comparisons. Use longest common subsequence on token representations to detect similar config record names for quality control. Solve Advent of Code in Haskell and Rust and practice on HackerRank.",
+        "Applied often in production work - BFS/DFS for CI job dependency skipping, topological sorting for multi-table database syncing with foreign key dependencies, bin-packing for test splitting with historical timing data, task queues for parallel workloads. Rendering ASTs of business rules to human-readable sentences, serializing ASTs for similarity comparisons. Using longest common subsequence on token representations to detect similar config record names for quality control.",
       img_url: "Algo",
-      priority: 5,
+      priority: 6,
     },
     {
       name: "Docker/CI",
       description:
-        "At Loancrate I migrated CI from CircleCI to Buildkite, built custom AWS AMIs with Packer and implemented Docker layer caching with ECR. Use multi-stage Docker builds for Node dependency management, multi-architecture container builds, image size optimization, health checks for ECS services and Docker Compose for local dev and testing. Authored 50+ production shell scripts for ECS deployment orchestration, Terraform automation, Docker image builds, test sharding and Lambda deployments. Built a custom Buildkite plugin for S3-based git repo caching with file locking for concurrent agents.",
+        "Used multi-stage Docker builds for shipping Node apps. Have done a ton of image size optimizations, security maintainance, health checks for ECS services and Docker Compose for local dev and testing. Authored 50+ production shell scripts for ECS deployment orchestration, Terraform automation, Docker image builds, test sharding and Lambda deployments. Built a custom Buildkite plugin for S3-based git repo caching with file locking for concurrent agents.",
       img_url: "Linux",
-      priority: 6,
+      priority: 5,
     },
     {
       name: "Terraform/IaC",
       description:
-        "Authored custom Terraform modules at Loancrate to manage Buildkite CI infrastructure on top of the AWS Elastic Stack - clusters, pipelines, S3 buckets for logs/cache/artifacts, secrets management, CI feature flags and a release freeze implementation. Also use Terraform for ephemeral review environments, ECS service definitions and VPC networking.",
+        "Authored custom Terraform modules to manage Buildkite CI infrastructure on top of the AWS Elastic Stack - clusters, pipelines, S3 buckets for logs/cache/artifacts, secrets management, CI feature flags and a release freeze implementation.",
       img_url: "AWS",
-      priority: 7,
+      priority: 4,
     },
     {
       name: "React",
       description:
-        "10 years of experience building production UIs with React across five companies. Performance-focused - memoization, virtualization for large interactive tables/lists, code splitting with dynamic imports, bundle analysis and profiling re-renders with React DevTools and CPU/network with browser DevTools. Use Apollo GraphQL hooks at Loancrate and React Query at Synthesis, including optimistic updates with both. Testing with Chromatic visual snapshots and Playwright e2e. At Coursera I worked on an in-browser VM environment with audio/video calls.",
+        "10 years of experience building production UIs with React across five companies. Often implemented performance improvements such as virtualization for large interactive tables/lists, code splitting with dynamic imports, bundle analysis and profiling re-renders with React DevTools and CPU/network with browser DevTools. Use Apollo GraphQL hooks at Loancrate and React Query at Synthesis, including optimistic updates with both. Testing with Chromatic visual snapshots and Playwright e2e. At Coursera I worked on an in-browser VM environment with audio/video calls.",
       img_url: "React",
       priority: 8,
     },
