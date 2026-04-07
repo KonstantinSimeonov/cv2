@@ -159,9 +159,9 @@ export default {
       priority: 5,
     },
     {
-      name: "Linux/Docker/CI",
+      name: "Docker/CI",
       description:
-        "Daily driver since my first year as a developer (Fedora, Gentoo, Arch). At Loancrate I migrated CI from CircleCI to Buildkite, built custom AWS AMIs with Packer, implemented Docker layer caching, wrote Bash tooling for deployments, review environment lifecycle and cost optimization. Comfortable with shell scripting, containers, networking and debugging production systems over SSH.",
+        "At Loancrate I migrated CI from CircleCI to Buildkite, built custom AWS AMIs with Packer and implemented Docker layer caching with ECR. Use multi-stage Docker builds for Node dependency management, multi-architecture container builds, image size optimization, health checks for ECS services and Docker Compose for local dev and testing. Authored 50+ production shell scripts for ECS deployment orchestration, Terraform automation, Docker image builds, test sharding and Lambda deployments. Built a custom Buildkite plugin for S3-based git repo caching with file locking for concurrent agents.",
       img_url: "Linux",
       priority: 6,
     },
