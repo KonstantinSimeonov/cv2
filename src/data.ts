@@ -132,84 +132,60 @@ export default {
   ],
   skills: [
     {
-      name: "Algorithms",
+      name: "AWS",
       description:
-        "I confidently use fundamental algorithms like dfs/bfs/topological sorting/union-find/knapsack as well as data structures like arrays/trees/queues/stacks/heaps/deques. I also occanisionally dip in more complex algorithms/structures like brute forcing with branch pruning, huffman coding, rolling hash, timsort, various dynammic programming problems, balanced trees/ASTs and immutable index trees.",
-      priority: 4,
-      img_url: "Algo",
-    },
-    {
-      name: "Typescript",
-      description:
-        "I've used Javascript/Typescript in my jobs at TelerikAcademy, ChaosGroup, Rhyme and Synthesis to build interactive user interfaces, single page applications, backend services, automated builds and tests processes.",
-      priority: 2,
-      img_url: "TS",
+        "Built and managed infrastructure across ECS, EC2, RDS, S3, SQS, SNS, CloudMap and IAM. At Loancrate, I use Terraform to provision ephemeral review environments, manage ECS deployments with service discovery and handle networking with VPCs and security groups. Previously used AWS Transcribe for video subtitles at Coursera and SQS/SNS for event-driven APIs at Pontica.",
+      img_url: "AWS",
+      priority: 1,
     },
     {
       name: "NodeJS",
       description:
-        "Node is the backend platform I feel most comfortable with - I love the opportunity to reuse code between frontend and backend, the abundance of libraries and the ease of prototyping. I've been using Node to build apps with Express, NextJS and Electron.",
-      priority: 5,
+        "My primary backend platform. At Loancrate I work on a Node/GraphQL/Prisma API powering a multi-tenant mortgage system - building features like cross-org config sync, internal job scheduling, Kafka consumers and webhook event publishing. Previously built backend services at Coursera (with Golang) and Synthesis (with NextJS API routes).",
       img_url: "Node",
-    },
-    {
-      name: "Mentoring",
-      description:
-        "Mentoring is a natural part of working in a team - I had the opportunity to mentor a lot of students as a teacher in TelerikAcademy and that helped me later successfully mentor fresh team members in Coursera and Synthesis. I'm also mentoring several people outside of work - check out https://latrovaliev.dev/, he's my best student!",
-      img_url: "Mentor",
-    },
-    {
-      name: "FP",
-      description:
-        "FP can provide amazing benefits (immutability, pure functions, abstraction via monads/functions/composition) in the right circumstances - I've had a blast leveraging the strong sides of FP with Haskell/Typescript/Scala in a variety of situations like automation, restful APIs, front-end development and testing.",
-      img_url: "Haskell",
-    },
-    {
-      name: "Linux/bash",
-      description:
-        "I've used Fedora/Gentoo/Arch since my first year as a developer. I'm using bash loops, pipes, streams and command line tools like grep, cat, sed, rsync, ssh, less and other to make life simpler. Can't live without a terminal anymore!",
-      img_url: "Linux",
+      priority: 2,
     },
     {
       name: "SQL",
       description:
-        "Building projects like editable video transcriptions (Coursera), 3d material store (ChaosGroup), student system with different roles, user search, event scheduling (Synthesis) made me appreciate how powerful and fun, yet also frustrating and complex relational databases/SQL can be.",
-      priority: 4,
+        "Daily work with PostgreSQL through Prisma at Loancrate - schema design, migrations, seed infrastructure, query optimization and multi-tenant data management across thousands of configuration records. At Synthesis, optimized TypeORM/MySQL queries and migrated table schemas. At Coursera, designed schemas for video transcription and scheduling systems.",
       img_url: "SQL",
+      priority: 3,
+    },
+    {
+      name: "Typescript",
+      description:
+        "My primary language for the last 9 years across frontend, backend, infrastructure tooling and CI pipelines. I use advanced type-level features regularly - branded types, conditional types, template literals, mapped types - and have published a TypeScript compiler plugin (tsx-ctrl-statements) with 4K weekly npm downloads.",
+      img_url: "TS",
+      priority: 4,
+    },
+    {
+      name: "Algorithms",
+      description:
+        "Confident with fundamentals like DFS/BFS, topological sorting, union-find, dynamic programming, heaps and balanced trees. I use Haskell, Rust and PicoLisp to solve Advent of Code problems and practice on HackerRank. This background helps me reason about performance tradeoffs and data modeling in day-to-day backend work.",
+      img_url: "Algo",
+      priority: 5,
+    },
+    {
+      name: "Linux/Docker/CI",
+      description:
+        "Daily driver since my first year as a developer (Fedora, Gentoo, Arch). At Loancrate I migrated CI from CircleCI to Buildkite, built custom AWS AMIs with Packer, implemented Docker layer caching, wrote Bash tooling for deployments, review environment lifecycle and cost optimization. Comfortable with shell scripting, containers, networking and debugging production systems over SSH.",
+      img_url: "Linux",
+      priority: 6,
     },
     {
       name: "React",
       description:
-        "I've been using React for 7 (at TelerikAcademy, ChaosGroup, Coursera, Synthesis) years and I love what it offers - reusable components/hooks, terse and declarative code, comprehensible UI state management and reasonable performance. Some of the React features I use regularly are contexts, memos, refs, useEffect, useCallback, keys and fragments.",
-      priority: -1,
+        "9 years of experience building production UIs with React across five companies. Comfortable with hooks, context, performance optimization (memoization, stable references, code splitting) and testing. At Loancrate I work on a large multi-tenant SPA with GraphQL; at Coursera I built an in-browser VM environment with audio/video calls.",
       img_url: "React",
+      priority: 7,
     },
     {
-      name: "git",
+      name: "Mentoring",
       description:
-        "Feature branches, rebasing, reflog, partial checkouts/stages, stashing - git is awesome, easily the best vcs for most software projects.",
-      img_url: "Git",
-    },
-    {
-      name: "OOP",
-      description:
-        "Before I became a functional programming hipster, I've explored OOP concepts (through working with C#, JS and Scala) such as class/prototypal inheritance, object composition, polymorphism and encapsulation. I also became familiar with design patterns such as decorators, chain of responsibility, command pattern, composite objects, factories and mediators.",
-      priority: 9,
-      img_url: "Oop",
-    },
-    {
-      name: "NextJS",
-      description:
-        "I've used NextJS to optimize page loading times via SSR (Coursera), to build a production full-stack web app (portal.synthesis.is, pastes.konsimeonov.lol) and to generate static sites (this site). Server-side props, routing, nextauth, configuring nextjs builds, dynamic imports, custom middlewares and api routes are features which I use regularly and confidently.",
-      img_url: "Nextjs",
-      priority: 4,
-    },
-    {
-      name: "AWS",
-      description:
-        "I've used SQS to implement notifications and client-facing APIs, AWS Transcribe to implement automatic subtitle generation for video lectures, S3 for storing environment variables, subtitles and hosting static sites, EC2 + ECS + ECR to deploy servers and jobs, RDS to provision Postgres instances, IAM for role/access management and Route 53/VPCs to secure and expose web applications. I'm also using the aws cli in github actions to automate deployments.",
-      img_url: "AWS",
-      priority: 3,
+        "Mentored 2000+ students at Telerik Academy and continued mentoring junior and mid-level engineers at Coursera, Synthesis and Loancrate. I also mentor developers outside of work - check out https://latrovaliev.dev/, he's my best student!",
+      img_url: "Mentor",
+      priority: 8,
     },
   ],
 } as const
