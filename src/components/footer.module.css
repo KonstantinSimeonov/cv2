@@ -3,3 +3,9 @@
   margin-top: 3rem;
   border-top: 1px dashed var(--primary-color);
 }
+
+@media print {
+  .footer {
+    display: none;
+  }
+}

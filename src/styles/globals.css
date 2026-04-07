@@ -87,10 +87,13 @@ h5 {
   @page {
     size: A4 portrait;
     margin: 0;
-    background-color: black;
   }
 
-  * {
-    font-weight: bold;
+  html {
+    font-size: 85%;
+  }
+
+  li, section, article {
+    break-inside: avoid;
   }
 }

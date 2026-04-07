@@ -39,7 +39,7 @@ export const WorkExperience: React.FC<{
                   tag="li"
                   color="secondary"
                   variant="description"
-                  sx={{ flex: 1 }}
+                  sx={{ flex: 1, minWidth: "20%" }}
                   key={d}
                 >
                   {d}

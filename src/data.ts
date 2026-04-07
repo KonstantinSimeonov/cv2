@@ -84,7 +84,7 @@ export const data = {
       companySiteUrl: "https://loancrate.com/",
       descriptions: [
         "Designed and built a cross-organization config sync system from scratch - sync templates, source ID namespaces, change diffing/planning and error recovery - used by all tenants to manage thousands of configuration records across 10+ organizations",
-        "Migrated CI from CircleCI to Buildkite, cutting build times from 60 min to ~13 min while halving costs - implemented Docker layer caching, Turborepo remote cache, parallel deployments, short-lived credentials, granular token scoping and job timeouts",
+        "Migrated CI from CircleCI to Buildkite, cutting build times from 1 hr to ~13 min and halving costs - used Docker layer caching, Turborepo remote cache, sharding, short-lived credentials/granular tokens",
         "Built Terraform-managed ephemeral review environments with AWS CloudMap service discovery, auto-rollback of failed migrations, daily cleanup automation and cost-optimized resource scaling",
         "Leveraged AI to automate product changes to tenant configurations and extract/validate document data on mortgage applications",
         "Built multi-tenant onboarding and authentication with WorkOS - SSO integration with Azure AD/Google Workspace, tenant environment provisioning and switching, user provisioning and onboarding flows",

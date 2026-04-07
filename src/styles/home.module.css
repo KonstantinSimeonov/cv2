@@ -3,6 +3,12 @@
   width: 100vw;
 }
 
+@media print {
+  .main {
+    padding: 2% 2%;
+  }
+}
+
 .main::before {
   background: var(--secondary-glow);
   border-radius: 50%;
