@@ -147,7 +147,7 @@ export default {
     {
       name: "Typescript",
       description:
-        "My primary language for the last 9 years across frontend, backend, infrastructure tooling and CI pipelines. I use advanced type-level features regularly - branded types, conditional types, template literals, mapped types - and have published a TypeScript compiler plugin (tsx-ctrl-statements) with 4K weekly npm downloads. Experienced with scaling TypeScript builds in large monorepos - simplifying complex types to reduce tsc overhead, tuning module structure and heap size to cut build times by a third or more, and migrating monorepo packages to ESM.",
+        "My primary language for the last 10 years across frontend, backend, infrastructure tooling and CI pipelines. I use advanced type-level features regularly - branded types, conditional types, template literals, mapped types - and have published a TypeScript compiler plugin (tsx-ctrl-statements) with 4K weekly npm downloads. Experienced with scaling TypeScript builds in large monorepos - simplifying complex types to reduce tsc overhead, tuning module structure and heap size to cut build times by a third or more, and migrating monorepo packages to ESM.",
       img_url: "TS",
       priority: 4,
     },
@@ -175,7 +175,7 @@ export default {
     {
       name: "React",
       description:
-        "9 years of experience building production UIs with React across five companies. Performance-focused - memoization, virtualization for large interactive tables/lists, code splitting with dynamic imports, bundle analysis and profiling re-renders with React DevTools and CPU/network with browser DevTools. Use Apollo GraphQL hooks at Loancrate and React Query at Synthesis, including optimistic updates with both. Testing with Chromatic visual snapshots and Playwright e2e. At Coursera I worked on an in-browser VM environment with audio/video calls.",
+        "10 years of experience building production UIs with React across five companies. Performance-focused - memoization, virtualization for large interactive tables/lists, code splitting with dynamic imports, bundle analysis and profiling re-renders with React DevTools and CPU/network with browser DevTools. Use Apollo GraphQL hooks at Loancrate and React Query at Synthesis, including optimistic updates with both. Testing with Chromatic visual snapshots and Playwright e2e. At Coursera I worked on an in-browser VM environment with audio/video calls.",
       img_url: "React",
       priority: 8,
     },
