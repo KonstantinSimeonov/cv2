@@ -11,7 +11,7 @@ export const Projects: React.FC<{
     url: string
   }[]
 }> = ({ projects }) => (
-  <Stack direction="row" align="flex-start">
+  <Stack direction="row" align="flex-start" gap={1}>
     {projects.map(project => (
       <Link
         key={project.title}
@@ -19,8 +19,8 @@ export const Projects: React.FC<{
         className={styles.card}
         href={project.url}
       >
-        <Text tag="h4">
-          {project.title} <span>-&gt;</span>
+        <Text tag="h4" sx={{ textDecoration: "underline" }}>
+          {project.title}
         </Text>
         <Text>{project.description}</Text>
       </Link>
