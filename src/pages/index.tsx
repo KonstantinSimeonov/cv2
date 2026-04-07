@@ -10,50 +10,57 @@ import { PersonalInfo } from "@/components/PersonalInfo"
 import ImgMap from "@/images"
 import { PrintInvis } from "@/components/PrintInvis"
 import classes from "@/styles/home.module.css"
-import data from "@/data"
+import { data } from "@/data"
 
-export default function Home() {
+const Metas = () => {
+  const description = "A senior full-stack developer with 10 years of experience with focus on backend/infra/automation."
   return (
-    <>
       <Head>
         <title>Konstantin Simeonov - Software Developer</title>
         <link rel="icon" href="/favicon.ico" />
 
         <meta
           name="description"
-          content="A React/Nodejs full-stack developer with 8 years of experience."
+          content={description}
         />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=0.85"
         />
 
-        <meta name="og:url" content="https://konsimeonov.lol" />
+        <meta name="og:url" content={data.site} />
         <meta name="og:type" content="website" />
         <meta
           name="og:description"
-          content="A React/Nodejs full-stack developer with 8 years of experience."
+          content={description}
         />
         <meta
           name="og:image"
-          content={`https://konsimeonov.lol${ImgMap.Photo.src}`}
+          content={`${data.site}${ImgMap.Photo.src}`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://konsimeonov.lol" />
+        <meta property="twitter:url" content={data.site} />
         <meta
           property="twitter:title"
-          content="Konstantin Simeonov - Software Developer"
+          content="Konstantin Simeonov - Senior Software Dev"
         />
         <meta
           property="twitter:description"
-          content="A React/Nodejs full-stack developer with 8 years of experience."
+          content={description}
         />
         <meta
           property="twitter:image"
-          content={`https://konsimeonov.lol${ImgMap.Photo.src}`}
+          content={`${data.site}${ImgMap.Photo.src}`}
         />
       </Head>
+  )
+}
+
+export default function Home() {
+  return (
+    <>
+      <Metas />
 
       <Stack tag="main" gap={2} className={classes.main}>
         <Stack tag="header" gap={1}>

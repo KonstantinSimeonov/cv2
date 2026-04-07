@@ -1,4 +1,5 @@
-export default {
+export const data = {
+  site: "https://konsimeonov.lol",
   personalInfo: {
     title: "Senior Software Engineer | Backend & Infrastructure",
     photoUrl: "target/web/public/main/konche-bonche.jpg",
