@@ -35,9 +35,9 @@ export default {
       location: "Chaosgroup",
       companySiteUrl: "https://www.chaos.com/",
       descriptions: [
-        "Worked on V-Ray for Sketchup/Rhino/Revit, which provides a cross-platform Electron UI for interacting with V-Ray",
-        "Built dynamic user interfaces using Electron, React, Typescript, Mobx - features like color pickers, file and graph explorers, material/geometries libraries",
-        "Set up unit and e2e test environments with Mocha/Ava/Jest, implemented builds with Webpack, Gitlab/Jenkins CI/CD for apps and libraries",
+        "Built a cross-platform Electron UI for V-Ray (Sketchup/Rhino/Revit) with React, Typescript and Mobx",
+        "Solved performance and scalability problems - virtualized explorer views for large material libraries, implemented graph subgraph copying, and used multi-process rendering for preview generation outside of Electron's main process",
+        "Drove the initiative of implementing a Gitlab CI/CD pipeline with Typescript/Webpack builds, linting, package and app publishing and e2e testing for apps and libraries",
       ],
     },
     {
@@ -60,9 +60,8 @@ export default {
       location: "Coursera",
       companySiteUrl: "https://www.coursera.org/",
       descriptions: [
-        "Developed rhyme.com, an in-browser interactive studying VM environment, complete with audio/video calls and video instructions",
-        "Implemented features like video transcriptions with AWS Transcribe and S3, in-browser video editing with FFMPEG, notification center, input capture/replay",
-        "Worked with React, Redux, Typescript, AWS, PostgreSQL and Golang",
+        "Developed rhyme.com, an in-browser interactive studying VM environment with audio/video calls and video instructions, using React, Typescript, AWS, PostgreSQL and Golang",
+        "Implemented video transcription pipeline with AWS Transcribe and S3, in-browser video editing with FFMPEG, notification center and input capture/replay",
         "Introduced property-based testing, published typescript definitions for untyped libraries, set up code coverage and automated dependency updates",
       ],
     },
@@ -73,7 +72,7 @@ export default {
       location: "Synthesis",
       companySiteUrl: "https://www.synthesis.com/teams",
       descriptions: [
-        "Worked on portal.synthesis.is (a student portal with game/study meetings and administrative functionality) with nextjs, typeorm, mysql, zod and react-query",
+        "Built and maintained portal.synthesis.is, a student portal for game/study scheduling and administration, using NextJS, TypeORM, MySQL, Zod and React Query",
         "Optimized typeorm/mysql queries, modified indexes and constraints, migrated table schemas to improve performance and enable new features",
         "Sped up CI runtime multiple times by more than 10 minutes using sharding, parallel db testing and job splitting",
         "Introduced strongly-typed middleware for authentication and validation to improve security and dev experience",
