@@ -138,9 +138,9 @@ export default {
       priority: 2,
     },
     {
-      name: "SQL",
+      name: "Databases",
       description:
-        "Daily work with PostgreSQL through Prisma at Loancrate - schema design, migrations, seed infrastructure, query optimization and multi-tenant data management across thousands of configuration records. At Synthesis, optimized TypeORM/MySQL queries and migrated table schemas. At Coursera, designed schemas for video transcription and scheduling systems.",
+        "Daily work with PostgreSQL through Prisma at Loancrate - schema design, migrations, seed infrastructure, query optimization and multi-tenant data management across thousands of configuration records. Use Redis for caching and job queues (BullMQ). At Synthesis, consolidated separate per-user-type tables into a single table with a discriminator column and JSON profile field, eliminating expensive multi-table joins and significantly speeding up search queries across a read-heavy app. At Coursera, designed PostgreSQL schemas for indexing S3-hosted videos and subtitle translations.",
       img_url: "SQL",
       priority: 3,
     },
