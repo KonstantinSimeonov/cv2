@@ -1,4 +1,4 @@
 config:
-  resume:certArn: arn:aws:acm:us-east-1:854799793105:certificate/86ff9c69-7607-4b6f-9406-f552b239a61d
+  resume:certArn: arn:aws:acm:eu-central-1:854799793105:certificate/293f9835-1a8d-422e-b6a9-3d0120174110 
   resume:domain: konsimeonov.com
   resume:zone: konsimeonov.com
