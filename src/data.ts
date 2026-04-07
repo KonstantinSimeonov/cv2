@@ -1,6 +1,6 @@
 export default {
   personalInfo: {
-    title: "Software dev and haskell/linux hobbyist",
+    title: "Senior Software Engineer | Backend & Infrastructure",
     photoUrl: "target/web/public/main/konche-bonche.jpg",
     contacts: [
       {
@@ -94,16 +94,16 @@ export default {
   ],
   projects: [
     {
-      title: "Advent of Code",
-      description:
-        "Using fun languages like haskell, rust and plsql to solve Advent of Code algorithmic problems",
-      url: "https://github.com/KonstantinSimeonov/aoc-megarepo",
-    },
-    {
       title: "tsx-ctrl-statements",
       description:
         "Typescript compiler plugin that adds control flow elements to jsx. Currently sitting at 4K weekly downloads on npm.",
       url: "https://github.com/KonstantinSimeonov/tsx-control-statements",
+    },
+    {
+      title: "linear-cli",
+      description:
+        "A Rust CLI for managing Linear issues via GraphQL, built for fast terminal-based workflow.",
+      url: "https://github.com/KonstantinSimeonov/linear-cli",
     },
     {
       title: "aot",
@@ -112,21 +112,10 @@ export default {
       url: "https://github.com/KonstantinSimeonov/aot",
     },
     {
-      title: "guacamole-client types",
+      title: "Advent of Code",
       description:
-        "Typescript library definitions for apache guacamole-client library which is used at Coursera.",
-      url: "https://github.com/DefinitelyTyped/DefinitelyTyped/pull/45949",
-    },
-    {
-      title: "pastes.konsimeonov.lol",
-      description:
-        "Web app for sharing code with multiple files per paste, private pastes, code highlighting and more. Build with Nextjs, Postgres and AWS.",
-      url: "https://pastes.konsimeonov.lol",
-    },
-    {
-      title: "blog.konsimeonov.lol",
-      description: "A blog where I get to share esoteric, non-trivial or otherwise curious programming insights. Built with Nextjs and AWS.",
-      url: "https://blog.konsimeonov.lol"
+        "Using fun languages like haskell, rust and plsql to solve Advent of Code algorithmic problems",
+      url: "https://github.com/KonstantinSimeonov/aoc-megarepo",
     }
   ],
   skills: [
