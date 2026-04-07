@@ -147,14 +147,14 @@ export default {
     {
       name: "Typescript",
       description:
-        "My primary language for the last 9 years across frontend, backend, infrastructure tooling and CI pipelines. I use advanced type-level features regularly - branded types, conditional types, template literals, mapped types - and have published a TypeScript compiler plugin (tsx-ctrl-statements) with 4K weekly npm downloads.",
+        "My primary language for the last 9 years across frontend, backend, infrastructure tooling and CI pipelines. I use advanced type-level features regularly - branded types, conditional types, template literals, mapped types - and have published a TypeScript compiler plugin (tsx-ctrl-statements) with 4K weekly npm downloads. Experienced with scaling TypeScript builds in large monorepos - simplifying complex types to reduce tsc overhead, tuning module structure and heap size to cut build times by a third or more, and migrating monorepo packages to ESM.",
       img_url: "TS",
       priority: 4,
     },
     {
       name: "Algorithms",
       description:
-        "Confident with fundamentals like DFS/BFS, topological sorting, union-find, dynamic programming, heaps and balanced trees. I use Haskell, Rust and PicoLisp to solve Advent of Code problems and practice on HackerRank. This background helps me reason about performance tradeoffs and data modeling in day-to-day backend work.",
+        "Applied daily in production work - BFS/DFS for CI job dependency skipping, topological sorting for multi-table config sync with foreign key dependencies, bin-packing for test splitting with historical timing data (dropping extreme outliers for accuracy), task queues for parallel workloads. Work with ASTs for a validation rule syntax (JSON-encoded boolean expressions) - rendering to human-readable text, serializing for similarity comparisons. Use longest common subsequence on token representations to detect similar config record names for quality control. Solve Advent of Code in Haskell and Rust and practice on HackerRank.",
       img_url: "Algo",
       priority: 5,
     },
