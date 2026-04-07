@@ -25,9 +25,7 @@ export default {
       location: "Telerik Academy",
       companySiteUrl: "https://www.telerikacademy.com/",
       descriptions: [
-        "Delivered lectures that helped more than 2000 students on their journey from beginner to juniour in web development with C#, HTML, CSS and JavaScript",
-        "Created exam programming problems for topics like algorithms, javascript DOM and programming fundamentals, organized exams and lectures",
-        "Experienced firsthand how important keeping deadlines is, became better at taking responsibilities and honed organizational skills",
+        "Delivered lectures and mentored 2000+ students through beginner-to-junior web development curriculum covering C#, HTML, CSS and JavaScript",
       ],
     },
     {
@@ -88,9 +86,9 @@ export default {
       location: "Loancrate",
       companySiteUrl: "https://loancrate.com/",
       descriptions: [
-        "Working on app.loancrate.com which is a multi-tenant LOS system powered by AWS, Node, Graphql, React, Postgres and AI",
-        "Designed and built a bunch of critical full stack features - tenant configuration management, automated UCD feedback integration, new tenant onboarding and authentication, etc",
-        "Responsible for keeping CI/local builds running quickly and smoothly utilizing Turborepo, Docker, Linux, Bash, Circleci and AWS",
+        "Designed and built a cross-organization config sync system from scratch - sync templates, source ID namespaces, change diffing/planning and error recovery - used by all tenants to manage thousands of configuration records across 10+ organizations",
+        "Migrated CI from CircleCI to Buildkite, cutting build times from 60 min to ~13 min while halving costs - implemented Docker layer caching, Turborepo remote cache, parallel deployments, short-lived credentials, granular token scoping and job timeouts",
+        "Built Terraform-managed ephemeral review environments with AWS CloudMap service discovery, auto-rollback of failed migrations, daily cleanup automation and cost-optimized resource scaling",
         "Leveraged AI to automate product changes to tenant configurations and extract/validate document data on mortgage applications",
       ],
     },
