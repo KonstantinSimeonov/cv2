@@ -8,10 +8,6 @@ export const data = {
         url: "https://github.com/KonstantinSimeonov",
         text: "github",
       },
-      {
-        url: "https://blog.konsimeonov.lol",
-        text: "blog",
-      },
     ],
   },
   workExperience: [
