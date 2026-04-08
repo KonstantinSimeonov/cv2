@@ -1,6 +1,11 @@
 import * as pulumi from "@pulumi/pulumi"
 import * as aws from "@pulumi/aws"
 
+const provider = new aws.Provider(`east`, {
+  profile: aws.config.profile,
+  region: `us-east-1`,
+})
+
 /**
  * @description
  * Created a certificate for the provided domain in the provided hosted zone.
@@ -11,11 +16,6 @@ import * as aws from "@pulumi/aws"
  * Domain and certificate validations are also created and returned.
  */
 const setupCert = (domain: string, zoneId: pulumi.Input<string>) => {
-  const region = new aws.Provider(`east`, {
-    profile: aws.config.profile,
-    region: `us-east-1`,
-  })
-
   const cert = new aws.acm.Certificate(
     `certificate`,
     {
@@ -23,16 +23,20 @@ const setupCert = (domain: string, zoneId: pulumi.Input<string>) => {
       validationMethod: `DNS`,
       keyAlgorithm: `RSA_2048`,
     },
-    { provider: region }
+    { provider }
   )
 
-  const validationDomain = new aws.route53.Record(`${domain}-validation`, {
-    name: cert.domainValidationOptions[0].resourceRecordName,
-    zoneId,
-    type: cert.domainValidationOptions[0].resourceRecordType,
-    records: [cert.domainValidationOptions[0].resourceRecordValue],
-    ttl: 10 * 60,
-  })
+  const validationDomain = new aws.route53.Record(
+    `${domain}-validation`,
+    {
+      name: cert.domainValidationOptions[0].resourceRecordName,
+      zoneId,
+      type: cert.domainValidationOptions[0].resourceRecordType,
+      records: [cert.domainValidationOptions[0].resourceRecordValue],
+      ttl: 10 * 60,
+    },
+    { provider }
+  )
 
   const certValidation = new aws.acm.CertificateValidation(
     `certificate-validation`,
@@ -40,136 +44,159 @@ const setupCert = (domain: string, zoneId: pulumi.Input<string>) => {
       certificateArn: cert.arn,
       validationRecordFqdns: [validationDomain.fqdn],
     },
-    { provider: region }
+    { provider: provider }
   )
 
-  return { region, cert, validationDomain, certValidation }
+  return { provider, cert, validationDomain, certValidation }
 }
 
 /**
  * @description
- * Create a bucket for the domain, enabling website endpoint,
- * making the bucket accessible with a policy/access indentity without
- * making the bucket public.
+ * Create a bucket for the domain with Origin Access Control (OAC).
+ * The bucket is not public - CloudFront accesses it via the OAC
+ * with a service principal policy.
  */
 const setupBucket = (domain: string) => {
-  const bucket = new aws.s3.Bucket(`${domain}-bucket`, {
-    bucket: domain,
-    website: {
-      indexDocument: `index.html`,
-      errorDocument: `404.html`,
-    },
-  })
-
-  const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity(
-    `originAccessIdentity`,
+  const bucket = new aws.s3.Bucket(
+    `${domain}-bucket`,
     {
-      comment: `setup s3 bucket which is accessible, but not public`,
-    }
+      bucket: domain,
+      website: {
+        indexDocument: `index.html`,
+        errorDocument: `404.html`,
+      },
+    },
+    { provider }
   )
 
-  const bucket_policy = new aws.s3.BucketPolicy(`bucket-policy`, {
-    bucket: bucket.id,
-    policy: pulumi.jsonStringify({
-      Version: `2012-10-17`,
-      Statement: [
-        {
-          Effect: `Allow`,
-          Principal: {
-            AWS: originAccessIdentity.iamArn,
-          },
-          Action: [`s3:GetObject`],
-          Resource: [pulumi.interpolate`${bucket.arn}/*`],
-        },
-      ],
-    }),
-  })
+  const oac = new aws.cloudfront.OriginAccessControl(
+    `oac`,
+    {
+      name: `${domain}-oac`,
+      originAccessControlOriginType: `s3`,
+      signingBehavior: `always`,
+      signingProtocol: `sigv4`,
+    },
+    { provider }
+  )
 
-  return { bucket, originAccessIdentity, bucket_policy }
+  return { bucket, oac }
 }
 
-// use a manually created zone because I don't
-// want to deal with providing the name servers to the
-// dns registrars.
-const getZoneId = (zoneName: string) => {
-  const zone = aws.route53.getZone({
-    name: zoneName,
-    privateZone: false,
-  })
+const setupZone = (zoneName: string) => {
+  const zone = new aws.route53.Zone(
+    `${zoneName}-zone`,
+    {
+      name: zoneName,
+    },
+    { provider }
+  )
 
-  return zone.then(z => z.zoneId)
+  return zone
 }
 
 /**
  * @description
  * Created a cloudfront distribution with access to the provided bucket via
- * access identity and the provided certificate.
- * Also creates a Route53 A type record for the distribution in the provided zone.
+ * Origin Access Control (OAC) and the provided certificate.
+ * Also creates a Route53 A type record for the distribution in the provided zone
+ * and a bucket policy allowing CloudFront to read from the bucket.
  */
 const setupDistribution = (
   domain: string,
   certArn: pulumi.Input<string>,
   zoneId: pulumi.Input<string>,
   bucket: aws.s3.Bucket,
-  originAccessIdentity: aws.cloudfront.OriginAccessIdentity
+  oac: aws.cloudfront.OriginAccessControl
 ) => {
-  const distribution = new aws.cloudfront.Distribution(`${domain}-distrib`, {
-    enabled: true,
+  const distribution = new aws.cloudfront.Distribution(
+    `${domain}-distrib`,
+    {
+      enabled: true,
 
-    aliases: [domain],
+      aliases: [domain],
 
-    viewerCertificate: {
-      acmCertificateArn: certArn,
-      sslSupportMethod: `sni-only`,
-    },
+      viewerCertificate: {
+        acmCertificateArn: certArn,
+        sslSupportMethod: `sni-only`,
+      },
 
-    origins: [
-      {
-        originId: bucket.arn,
-        domainName: bucket.bucketRegionalDomainName,
-        s3OriginConfig: {
-          originAccessIdentity:
-            originAccessIdentity.cloudfrontAccessIdentityPath,
+      origins: [
+        {
+          originId: bucket.arn,
+          domainName: bucket.bucketRegionalDomainName,
+          originAccessControlId: oac.id,
+        },
+      ],
+
+      defaultRootObject: `index.html`,
+
+      defaultCacheBehavior: {
+        targetOriginId: bucket.arn,
+        allowedMethods: [`GET`, `HEAD`, `OPTIONS`],
+        cachedMethods: [`GET`, `HEAD`, `OPTIONS`],
+        viewerProtocolPolicy: `redirect-to-https`,
+        forwardedValues: {
+          cookies: { forward: `none` },
+          queryString: false,
         },
       },
-    ],
 
-    defaultRootObject: `index.html`,
+      priceClass: `PriceClass_100`,
 
-    defaultCacheBehavior: {
-      targetOriginId: bucket.arn,
-      allowedMethods: [`GET`, `HEAD`, `OPTIONS`],
-      cachedMethods: [`GET`, `HEAD`, `OPTIONS`],
-      viewerProtocolPolicy: `redirect-to-https`,
-      forwardedValues: {
-        cookies: { forward: `none` },
-        queryString: false,
+      restrictions: {
+        geoRestriction: {
+          restrictionType: `none`,
+        },
       },
     },
+    { provider }
+  )
 
-    priceClass: `PriceClass_100`,
-
-    restrictions: {
-      geoRestriction: {
-        restrictionType: `none`,
-      },
+  const bucketPolicy = new aws.s3.BucketPolicy(
+    `bucket-policy`,
+    {
+      bucket: bucket.id,
+      policy: pulumi.jsonStringify({
+        Version: `2012-10-17`,
+        Statement: [
+          {
+            Effect: `Allow`,
+            Principal: {
+              Service: `cloudfront.amazonaws.com`,
+            },
+            Action: `s3:GetObject`,
+            Resource: pulumi.interpolate`${bucket.arn}/*`,
+            Condition: {
+              StringEquals: {
+                "AWS:SourceArn": distribution.arn,
+              },
+            },
+          },
+        ],
+      }),
     },
-  })
+    { provider }
+  )
 
-  const aRecord = new aws.route53.Record(domain, {
-    name: domain,
-    zoneId,
-    type: `A`,
-    aliases: [
-      {
-        name: distribution.domainName,
-        zoneId: distribution.hostedZoneId,
-        evaluateTargetHealth: true,
-      },
-    ],
-  })
+  const aRecord = new aws.route53.Record(
+    domain,
+    {
+      name: domain,
+      zoneId,
+      type: `A`,
+      aliases: [
+        {
+          name: distribution.domainName,
+          zoneId: distribution.hostedZoneId,
+          evaluateTargetHealth: true,
+        },
+      ],
+    },
+    { provider }
+  )
 
-  return { distribution, aRecord }
+  return { distribution, aRecord, bucketPolicy }
 }
 
 /** Config file: {@link ./infra/Pulumi.resume.yaml} */
@@ -177,21 +204,18 @@ const stackCfg = new pulumi.Config()
 
 const config = {
   domain: stackCfg.require(`domain`),
-  certArn: stackCfg.get(`certArn`),
   zone: stackCfg.require(`zone`),
 }
 
-const { bucket, originAccessIdentity } = setupBucket(config.domain)
-const zoneId = getZoneId(config.zone)
-const certArn =
-  config.certArn ||
-  setupCert(config.domain, zoneId).certValidation.certificateArn
+const zone = setupZone(config.zone)
+const { bucket, oac } = setupBucket(config.domain)
+const certArn = setupCert(config.domain, zone.id).certValidation.certificateArn
 const { distribution } = setupDistribution(
   config.domain,
   certArn,
-  zoneId,
+  zone.id,
   bucket,
-  originAccessIdentity
+  oac
 )
 
 export const bucketName = bucket.id
@@ -199,3 +223,4 @@ export const bucketUri = pulumi.interpolate`s3://${bucket.bucket}`
 export const cloudfrontDomain = distribution.domainName
 export const websiteEndpoint = bucket.websiteEndpoint
 export const domainEndpoint = pulumi.interpolate`https://${config.domain}`
+export const nameServers = zone.nameServers

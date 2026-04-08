@@ -38,3 +38,5 @@ next-env.d.ts
 # thanks nextjs
 /public/nextImageExportOptimizer/
 next-image-export-optimizer-hashes.json
+
+infra/.env
